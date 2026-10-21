@@ -1,0 +1,703 @@
+\chapter{Lecture 2 - 05-10-2026}
+
+\section{Reference Texts and Study Approach}
+
+This textbook is quite difficult, yet it is extremely complete and exhaustive. To be honest, I only discovered its existence during the third year of my degree course. Currently, I have deposited a copy of the volume at the library of the university school (the Scuola Superiore di Catania, to be precise). I warmly invite you to check its availability in the library, as it was the text on which I prepared for the first time on these topics.
+
+During the lecture, I will adopt a blackboard approach, physically writing notes, as if I were in your place. This is because my intent is to proceed following the same approach I would adopt if I were a student myself.
+
+\section{Review of Quantum Mechanics}
+
+For today's lecture, I know well that you have all already taken exams regarding Quantum Mechanics (or, in some bachelor's degree systems, related courses within Mathematical Methods of Physics or Structure of Matter). However, I consider it essential to recall some fundamental concepts that will constitute the theoretical framework of plasma spectroscopy. We will start directly.
+
+\subsection{Physical Observables}
+
+The starting point is to define the quantities necessary to describe our physical system. From a physical point of view, we need mathematical entities capable of quantifying measurable properties.
+
+What is measured experimentally is defined as an \textbf{observable}.
+An observable is a specific number that expresses the value of a \textbf{dynamic variable}. Classic examples of dynamic variables are:
+\begin{itemize}
+\item \textbf{Position} (spatial coordinates).
+\item The quantity of motion or \textbf{momentum}.
+\end{itemize}
+I do not think you have difficulties with either the nomenclature or the underlying physical concept.
+
+\subsection{The Linear and Hermitian Operator}
+
+In quantum mechanics, every observable is mathematically represented by an \textbf{operator}. The operator acts on the \textbf{state of the system}.
+
+The state of the system is typically described by a mathematical function to which we assign a Greek letter, commonly $\psi$ (psi) or $\phi$ (phi). Choose the notation you prefer, the important thing is consistency.
+
+An operator is, in fact, a mathematical rule that, applied to a specific state function $\psi$, converts it into a new function $\psi'$.
+The fundamental eigenvalue equation is written in the form:
+\begin{equation}
+\alpha \psi = a \psi
+\end{equation}
+Where:
+\begin{itemize}
+\item $\alpha$ represents the operator (which we will call \textbf{linear Hermitian operator}).
+\item $\psi$ is the eigenfunction.
+\item $a$ is the number (scalar) representing the eigenvalue corresponding to the measured observable.
+\end{itemize}
+
+There are various notational conventions for operators. Instead of using Greek letters like $\alpha$, you might find operators indicated with capital Latin letters endowed with a circumflex accent (the \textit{hat} or \textit{cap}), for example:
+\begin{equation}
+\hat{A} \psi = a \psi
+\end{equation}
+Since there is no unequivocal notation in the literature, we will use the forms that will progressively prove more convenient, provided the context is clear.
+
+\subsection{Properties of Operators: Linearity}
+
+Not having at hand the exact syllabus of your bachelor's degree course, let's quickly review what it means that an operator is \textbf{linear}.
+
+An operator $A$ is defined as linear if, given two generic functions $\psi_r$ and $\psi_s$ and a constant $a$, the following distributive property holds:
+\begin{equation}
+A (a\psi_r + a\psi_s) = a A \psi_r + a A \psi_s
+\end{equation}
+In the most general case, with different constants $a$ and $b$ associated with the respective functions, the linearity condition for an operator $\alpha$ is strictly expressed as:
+\begin{equation}
+\alpha (a\psi_r + b\psi_s) = a \alpha \psi_r + b \alpha \psi_s
+\end{equation}
+
+\subsection{Properties of Operators: Hermitianity}
+
+The second fundamental property is \textbf{Hermitianity}.
+An operator $A$ is defined as \textbf{Hermitian} if it coincides with its adjoint operator. The adjoint operator is usually indicated with a dagger-shaped superscript ($^\dagger$, commonly read as "dagger" in English).
+Therefore, the condition of Hermitianity is written:
+\begin{equation}
+A = A^\dagger
+\end{equation}
+These are basic concepts, which you have almost certainly encountered and applied numerous times, but which are essential to have firmly established in your memory to proceed.
+
+\section{Eigenvalues, Eigenstates and Physical Measurements}
+
+We introduce an eigenvalue $\alpha'$, corresponding to which we can write the following equation:
+\begin{equation}
+\alpha \psi = \alpha' \psi
+\end{equation}
+This is exactly the same equation introduced previously, written in a different way. The goal here is to get you used to using different letters and notations to indicate the same concept, so that you can be more flexible and recognize the physical structure regardless of the formalism adopted.
+
+The parameter $\alpha'$ (the eigenvalue) can be:
+\begin{itemize}
+\item A \textbf{discrete number} (e.g., $1, 2, 3$).
+\item A \textbf{continuous} value (therefore represented as a function).
+\end{itemize}
+
+All the functions $\psi$ that satisfy this particular equation for a given operator are called \textbf{eigenstates}. For the eigenstates $\psi$ that satisfy the equation with respect to a specific $\alpha'$, we formally say that they "belong to the eigenvalue $\alpha'$". Often, to make this link explicit, we will indicate them with the indexed notation:
+\begin{equation}
+\alpha \psi_{\alpha'} = \alpha' \psi_{\alpha'}
+\end{equation}
+
+There is another point of crucial importance. Since the outcome of a real physical measurement must necessarily provide a result belonging to the field of real numbers for every possible state $\psi$, it follows that \textbf{all physically measurable quantities are represented by real eigenvalues}.
+I emphasize this aspect because the quantum formalism appears deeply theoretical and abstract. When performing calculations on these mathematical objects, it is easy to lose their practical meaning; however, always remember that these \textit{real observables} translate into direct experimental measurements: momentum, position, and energy.
+
+\section{The Operator Spectrum and Continuity}
+
+Here is the fundamental element: the complete set (the full set) of all eigenvalues of an operator $\alpha$ is called the \textbf{Spectrum} of $\alpha$.
+
+This concept provides you with the key to connecting abstract mathematics to what we discussed last time regarding the intensity of the electromagnetic spectrum. We said that the spectrum essentially manifests itself in two ways:
+\begin{itemize}
+\item Discrete: originating \textbf{spectral lines}.
+\item Continuous: originating a continuous spectrum.
+\end{itemize}
+
+Let us consider an observable (which from now on we will indicate with the letter $\omega$) whose set of eigenvalues is not purely discrete, but turns out to be \textbf{entirely or partially continuous}.
+In this case, the eigenstates $\psi$ will belong to values (let's call them $\omega'$) positioned in a continuous interval and not on discrete levels.
+
+In a continuous spectrum, the normalization condition between the states $\psi_{\omega'}$ and $\psi_{\omega''}$ can no longer make use of the Kronecker Delta, but must be rewritten in this way:
+\begin{equation}
+\int \psi_{\omega'}^* \psi_{\omega''} , d\tau = \delta(\omega' - \omega'')
+\end{equation}
+
+The function on the right-hand side is the \textbf{Dirac Delta Function} ($\delta(x)$).
+This is a particular mathematical distribution, defined by the following properties (setting for simplicity $x = \omega' - \omega''$):
+\begin{equation}
+\delta(x) =
+\begin{cases}
+0 & \text{per } x \neq 0 \
++\infty & \text{per } x = 0
+\end{cases}
+\end{equation}
+Subject to the integral normalization condition:
+\begin{equation}
+\int_{-\infty}^{+\infty} \delta(x) , dx = 1
+\end{equation}
+
+\section{Representations: The Approach of Schrödinger and Dirac}
+
+In quantum mechanics, there are various formal representations to describe exactly the same phenomenon. One can use the differential formulation, matrices, and so on. They all converge to the same result: describing the evolution of eigenstates and eigenvalues under the action of operators.
+
+Let's proceed to review these representations to gradually reintroduce the variables that will be necessary for us.
+
+\subsection{From the Wave Function to Bra-Ket Notation}
+
+Let's focus on the classical Schrödinger Representation applied to vector notation.
+Consider a standard integral in wave mechanics, the calculation of the expectation value (or matrix element):
+\begin{equation}
+\int \psi^* A \psi , d\tau
+\end{equation}
+
+How can we condense this information? By resorting to the \textbf{Bra} and the \textbf{Ket} (the notation introduced by Paul Dirac).
+\begin{itemize}
+\item The column vector, which represents the standard wave function $\psi$, is called \textbf{Ket} and is indicated as $\ket{\psi}$.
+\item The complex conjugate row vector, $\psi^*$, is called \textbf{Bra} and is indicated as $\bra{\psi}$.
+\end{itemize}
+
+When they are joined around an operator $A$, we obtain the formulation:
+\begin{equation}
+\bra{\psi} A \ket{\psi}
+\end{equation}
+This notation, which may appear hermetic at first glance, is \textbf{exactly equivalent} to the integral $\int \psi^* A \psi \, d\tau$. The only difference lies in the fact that the spatial dependence of the function $\psi(x)$ or its complex conjugate $\psi^*(x)$ inside the integral is not made explicit; the functions are treated directly as vector or matrix entities (state vectors).
+
+If you try to insert the dependence on a variable, for example on the coordinates $x$ and time $t$, this equivalence will be even clearer to you. The mathematical step is the same one you will have already encountered when tackling basic QM courses. This serves solely as a reminder, to standardize the nomenclature and guarantee that everyone understands the formalism I will adopt in class, sparing you from having to hurriedly pore over old notes in case of temporary amnesia.
+
+\section{The Rules of Quantum Mechanics}
+
+Having defined the notation, let's get to the heart of the matter by analyzing the fundamental principles of quantum mechanics applied to kinematic and thermodynamic variables.
+
+\subsection{Coordinates and Conjugated Momentum}
+
+Let us consider a Cartesian coordinate system. To generalize and extend the concept to $N$ dimensions, we will indicate the coordinates as $x_1, x_2, \ldots, x_{3N}$ (rather than using $x, y, z$).
+Concurrently, we define the associated \textbf{conjugated momentum}, indicated with $p_1, p_2, \ldots, p_{3N}$.
+
+These two quantities (coordinates and conjugated momenta) constitute the backbone of kinematics, and in the quantum regime they obey precise \textbf{Commutation Rules}. Let us recall the definition of the \textbf{commutator} between two operators $A$ and $B$:
+\begin{equation}
+[A, B] = AB - BA
+\end{equation}
+
+For position and momentum operators, the rules are explicated as follows:
+\begin{itemize}
+\item Commutator between the spatial components:
+\begin{equation}
+[x_i, x_j] = x_i x_j - x_j x_i = 0
+\end{equation}
+\item Commutator between the conjugated momenta:
+\begin{equation}
+[p_i, p_j] = p_i p_j - p_j p_i = 0
+\end{equation}
+\item Crossed commutator between position and momentum (formal Heisenberg Uncertainty Relation):
+\begin{equation}
+[x_i, p_j] = x_i p_j - p_j x_i = i \hbar \delta_{ij}
+\end{equation}
+(Where $i$ is the imaginary unit and $\hbar$ is the reduced Planck constant).
+\end{itemize}
+
+\subsection{The Hamiltonian and Time Evolution}
+
+Exactly in analogy with the total energy of a system in classical mechanics, in quantum mechanics we define the \textbf{Hamiltonian function}, commonly indicated with the letter $H$.
+
+The Hamiltonian is a function depending on both the momenta $p$ and the coordinates $x$. While in classical physics it provides Hamilton's equations of motion, in quantum theory the Hamiltonian operator deterministically determines the evolution of the system's state over time.
+
+Resuming the formal structure (replacing the generic operator $\alpha$ used so far with the Hamiltonian $H$), the equation of motion is derived by defining the derivative of the quantum state with respect to time. This is the very famous \textbf{time-dependent Schrödinger Equation}:
+\begin{equation}
+i \hbar \frac{\partial \psi}{\partial t} = H \psi
+\end{equation}
+
+When we apply the Hamiltonian operator $H$ to a specific stationary state (an eigenstate of the system), it returns the energy eigenvalue $E$ of that state, i.e., the energy associated with the photon emitted or absorbed during the transition. The stationary (time-independent) form is reduced to:
+\begin{equation}
+H \psi = E \psi
+\end{equation}
+
+The importance of the Hamiltonian lies in the fact that it is the observable responsible for quantifying energy. As the state evolves over time and the wave function changes phase, it is the application of the $H$ operator that governs and quantizes the energy levels associated with the studied plasma and radiation.
+
+\section{Time Evolution and Stationary States}
+
+Resuming the time dependence discussed previously, the time-dependent Schrödinger equation governs the evolution of the state of the system:
+\begin{equation}
+i \hbar \frac{\partial \psi(x,t)}{\partial t} = H \psi(x,t)
+\end{equation}
+(Where $H$ is the Hamiltonian operator, in charge of defining the energy, and the constant $\hbar = h / 2\pi$).
+
+The time evolution of a state (for systems with a Hamiltonian not explicitly dependent on time) produces a phase factor. The time derivative leads to the exponential:
+\begin{equation}
+e^{-i \frac{E}{\hbar} t}
+\end{equation}
+The complex conjugate state $\psi^*$ will exhibit the opposite phase factor:
+\begin{equation}
+e^{+i \frac{E}{\hbar} t}
+\end{equation}
+To clarify how the system evolves and in what way the Hamiltonian defines the energy of the quantum state, let us consider the calculation of the expectation value of a generic observable. Integrating over space:
+\begin{equation}
+\int \psi^*(x,t) A \psi(x,t) , d\tau
+\end{equation}
+Substituting the explicit time dependence into the states:
+\begin{equation}
+\int \left( \psi^*(x,0) e^{+i \frac{E}{\hbar} t} \right) A \left( \psi(x,0) e^{-i \frac{E}{\hbar} t} \right) d\tau
+\end{equation}
+Since the operator $A$ (if it does not depend on time) acts only on the spatial part $\psi(x,0)$, the complex exponentials with opposite phase cancel each other out ($e^{+i \frac{E}{\hbar} t} \cdot e^{-i \frac{E}{\hbar} t} = 1$).
+
+The result shows us that the value of the observable measured at time $t$ (final state) is **identical** to the value measured at time $t=0$ (initial state).
+When this happens, we are in the presence of what is defined as a \textbf{Stationary State}, that is, a state in which the probabilities of the physical quantities do not change over time.
+The equation that describes these states is the time-independent Schrödinger Equation:
+\begin{equation}
+H \psi = E \psi
+\end{equation}
+This is the "friendly" formula that we will encounter and use countless times to derive the energy levels and explain the emission of photons.
+
+\section{The Hydrogen-like Spectrum: The Single-Electron Model}
+
+As mentioned during the introduction to plasma spectroscopy in the previous lecture, let us start from the most basic case (which many of you will have already encountered in Structure of Matter): the \textbf{single-electron} atomic spectrum.
+This does not exclusively include the hydrogen atom (H), but embraces an entire family of ions called \textbf{Hydrogen-like Ions} (Hydrogen-like atoms or H-like ions).
+
+Hydrogen-like ions are atoms of heavier elements (present in the periodic table) that have been progressively ionized, losing their electrons until they are left with \textbf{only one electron} orbiting around the nucleus.
+Since their structure is reduced to a nucleus and a single electron, their physical behavior and the equations that govern them are extremely similar to those of hydrogen, although the Coulomb attraction is greater due to the higher number of protons in the nucleus.
+
+A classic example: \textbf{Helium} (He). The neutral atom has 2 electrons. If it loses one electron, it becomes the singly ionized Helium ion. Since it has only one electron remaining, it behaves like a hydrogen-like ion.
+
+\subsection{Spectroscopic Notation and Ionization}
+
+There is a marked difference in notation between chemistry and astrophysical spectroscopy for indicating ions.
+\begin{itemize}
+\item \textbf{Chemical Notation}: The ionization state is indicated by placing "plus" signs as superscripts after the element symbol. Singly ionized Helium will be written as $\text{He}^+$.
+\item \textbf{Spectroscopic Notation}: In spectroscopy, the neutral atom is not indicated with a zero, but the count starts from "I" (one in Roman numerals). The ionized state scales accordingly:
+\begin{itemize}
+\item Neutral atom = I (e.g., $\text{H I}$, $\text{He I}$)
+\item Singly ionized = II (e.g., $\text{He II}$, corresponding to $\text{He}^+$)
+\item Doubly ionized = III (e.g., $\text{Li III}$, corresponding to $\text{Li}^{2+}$)
+\end{itemize}
+\end{itemize}
+For example, \textbf{Lithium} ($\text{Li}$), which basically possesses 3 electrons ($\text{Z}=3$), to become hydrogen-like must lose 2 electrons, becoming $\text{Li}^{2+}$ in chemical notation, which will correspond to \textbf{Li III} in spectroscopic notation.
+
+This Roman numeral system for spectroscopy can initially be confusing, as the chemical exponent of the charge and the spectroscopic index are out of phase by 1 unit ($n_{\text{spectroscopic}} = n_{\text{charge}} + 1$). I urge you to always keep a \textbf{Periodic Table} at hand during these lectures. Knowing the atomic numbers $Z$ of every element by heart is not a course requirement; the periodic table is the basic tool of our trade.
+
+\section{The Hydrogen-like Atom Model: Nucleus-Electron Interaction}
+
+Let us proceed to physically model our hydrogen-like system.
+The components of our basic model are exclusively two:
+\begin{enumerate}
+\item A massive \textbf{Nucleus}, with a net positive charge equal to $+Z e$ (where $Z$ is the atomic number, which for neutral hydrogen is $Z=1$, and $e$ is the elementary charge).
+\item A \textbf{Single Electron}, with mass $m_e$ and charge $-e$.
+\end{enumerate}
+
+The two particles interact solely via an electrostatic attractive force: the \textbf{Coulomb Force}. Neglecting the vectorial formalism for a moment, the magnitude of the Coulomb force is expressed by Coulomb's law:
+\begin{equation}
+F_C = \frac{1}{4\pi\varepsilon_0} \frac{(Ze)(e)}{r^2}
+\end{equation}
+Where $r$ is the radial distance between the nucleus and the electron. As is evident from the equation, the force is proportional to the product of the charges and inversely proportional to the square of the distance.
+
+\subsection{The Reduced Mass and the Two-Body Problem}
+
+The nucleus is not fixed in space; both the nucleus (with mass $m_p$, meaning for simplicity the nuclear mass) and the electron (with mass $m_e$) move around their common center of mass. This is the classic two-body problem.
+
+To simplify the analysis and reduce the problem to the motion of a single virtual "particle" around a fixed center, in mechanics the concept of \textbf{Reduced Mass} is introduced, usually indicated with the letter $\mu$:
+\begin{equation}
+\mu = \frac{m_e \cdot m_p}{m_e + m_p}
+\end{equation}
+
+To understand how much the reduced mass is worth, let us recall the value of the electron mass. The electron has a mass $m_e \approx 9.1 \times 10^{-31} \text{ kg}$, which expressed in rest energy is equivalent to $\sim 0.511 \text{ MeV}$. The mass of the proton (or of the nucleus) is immensely greater (about 1836 times greater for hydrogen).
+Since $m_p \gg m_e$, we can divide the numerator and denominator of the reduced mass equation by $m_p$:
+\begin{equation}
+\mu = \frac{m_e}{1 + \frac{m_e}{m_p}}
+\end{equation}
+Since the term $m_e/m_p$ tends to zero, the equation is simplified and the reduced mass coincides in first approximation with the mass of the electron:
+\begin{equation}
+\mu \approx m_e
+\end{equation}
+
+This approximation widely justifies the basic theoretical assumption in which the nucleus is considered stationary (at the center of the coordinate system) and the orbit of only the electron around it is modeled.
+
+\subsection{The Central Force Field and the Electrostatic Potential}
+
+Following the mass approximation, the electron can be modeled as a particle in motion inside a \textbf{central force field} (Central Field, corresponding to the "centrally symmetric field" of analytical mechanics).
+
+In a central field, the potential energy $U$ (or $V$) does not depend on the angular direction, but is an exclusive function of the radial distance $r$ from the force center (the nucleus). Therefore we will write:
+\begin{equation}
+U = U(r)
+\end{equation}
+The electrostatic potential energy for the hydrogen-like system, deriving from the integration of the attractive Coulomb force, has the well-known form:
+\begin{equation}
+U(r) = - \frac{1}{4\pi\varepsilon_0} \frac{Ze^2}{r}
+\end{equation}
+The negative sign indicates that the potential is attractive: the electron is "bound" to the nucleus (forming a potential well) and energy must be supplied to the system to separate the two charges to infinity.
+
+\section{The Single-Electron Atom Model}
+
+To define our basic model for the single-electron atom (or hydrogen-like ion), we must necessarily introduce some initial approximations. So as not to excessively complicate the discussion, we will assume the following:
+\begin{itemize}
+\item \textbf{We neglect the electron spin} (and the relative electromagnetic interactions associated with it).
+\item \textbf{We neglect relativistic effects}.
+\end{itemize}
+
+Under these hypotheses, we can define a relatively simple Hamiltonian ($H$) to describe our atom. Starting from the classical formulation and passing to quantum mechanics, the Hamiltonian is expressed by the sum of kinetic energy and potential energy ($U$). In terms of the momentum components ($p_x, p_y, p_z$), we will have:
+\begin{equation}
+H = \frac{p_x^2 + p_y^2 + p_z^2}{2\mu} + U
+\end{equation}
+That is, in a more compact form:
+\begin{equation}
+H = \frac{p^2}{2\mu} + U
+\end{equation}
+This quantum expression describes the electron exploiting the reduced mass $\mu$ that we have previously defined.
+
+\subsection{Angular Momentum and Commutation Rules}
+
+In addition to momentum, we must consider the \textbf{angular momentum} $\mathbf{L}$. It is a quantity that you have already encountered in the basic Physics 1 courses.
+Angular momentum has three directional components: $L_x, L_y, L_z$, to which the squared magnitude operator $L^2$ is added. (Notational note: spatial coordinates can be indifferently indicated as $x, y, z$ or as $x_1, x_2, x_3$, the choice is irrelevant for the physics of the problem).
+
+In quantum mechanics, the fundamental aspect lies in the commutation properties between the Hamiltonian $H$, the squared magnitude of the angular momentum $L^2$, and the individual components of $\mathbf{L}$.
+It is not possible to simultaneously know all the directional components of angular momentum, but it is possible to determine $H$, $L^2$ and \textit{only one} of the spatial directions (conventionally $L_z$ is chosen).
+
+This implies that the commutators between these quantities are zero:
+\begin{equation}
+[H, L^2] = 0
+\end{equation}
+\begin{equation}
+[H, L_z] = 0
+\end{equation}
+\begin{equation}
+[L^2, L_z] = 0
+\end{equation}
+
+Since these operators commute with each other, what we are looking for are the \textbf{simultaneous eigenstates} of $H$, $L^2$ and $L_z$.
+
+\section{Schrödinger Equation and Laplacian Operator}
+
+To find these eigenstates, we move to the \textbf{Schrödinger Representation}. The stationary Schrödinger equation is written as:
+\begin{equation}
+-\frac{\hbar^2}{2\mu} \nabla^2 \phi + U \phi = E \phi
+\end{equation}
+
+Allow me a digression on notation, as I noticed that last year it generated confusion. The symbol $\nabla^2$ (nabla squared) appears in the equation. In some texts, or from other professors, you might see it indicated with a triangle, namely $\Delta$.
+Both $\nabla^2$ and $\Delta$ represent the same operator: the \textbf{Laplacian operator}. They are mathematically identical formulations, it is just a matter of calling or writing them differently. In this course we will use the notation with nabla squared ($\nabla^2$). In the above equation, $\phi$ represents the state wave function, $U$ is the potential energy and $E$ is the energy eigenvalue.
+
+\subsection{Insertion of the Coulomb Potential}
+
+How do we define the potential energy $U$ in the Coulomb field?
+As you know from Physics 1, potential energy derives from force. Since the Coulomb force is inversely proportional to the square of the distance ($1/r^2$), the associated (attractive) potential energy is proportional to $1/r$.
+
+Let us therefore substitute the explicit expression of the potential $U(r)$ inside our Schrödinger equation:
+\begin{equation}
+-\frac{\hbar^2}{2\mu} \nabla^2 \phi + U(r) \phi = E \phi
+\end{equation}
+
+At this point, we can proceed with a reorganization of the terms. We bring the term $E \phi$ to the left member to equate the equation to zero and, if necessary, change the signs by factoring out the wave function $\phi$. We will have:
+\begin{equation}
+\left( -\frac{\hbar^2}{2\mu} \nabla^2 + U(r) - E \right) \phi = 0
+\end{equation}
+
+In this equation, $r$ represents the radial distance between the electron and the nucleus.
+If we want to specialize the equation for the neutral hydrogen atom right away, we will set the atomic number $Z = 1$ inside the expression for $U(r)$.
+
+At this point, with the differential equation correctly set up, we will take a short 5-minute break before proceeding with its resolution. If there are questions up to here, I am available.
+
+\section{Resolution of the Schrödinger Equation in Polar Coordinates}
+
+Our goal, now, is to solve the differential Schrödinger equation just set up to find the eigenvalues of energy, angular momentum and the associated wave functions.
+
+As you probably know from mathematical analysis and quantum mechanics, to easily solve this type of equations with centrally symmetric potentials (where $U$ depends only on $r$), it is necessary to abandon Cartesian coordinates and move to \textbf{spherical polar coordinates} ($r, \theta, \varphi$).
+This change of coordinates is crucial because it allows the \textbf{separation of variables}.
+
+We will not carry out all the intermediate analytical steps today, as the focus of this lecture will be on the construction of electron configurations (a more practical but fundamentally important exercise). Let's rewrite the Laplacian operator $\nabla^2$ in spherical polar coordinates to show the structure of the equation:
+\begin{equation}
+\left[ -\frac{\hbar^2}{2\mu} \left( \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2}{\partial \varphi^2} \right) - \frac{Ze^2}{r} \right] \phi = E \phi
+\end{equation}
+(Note: the professor indicates $U = -\frac{Ze^2}{r}$ in Gaussian CGS units, omitting the $1/4\pi\varepsilon_0$ factor for compactness, as is typical in the astrophysical/spectroscopic field).
+
+\subsection{Separation of Variables and Factorization of the Wave Function}
+
+Exploiting the symmetry of the system, the solution $\phi(r, \theta, \varphi)$ can be factorized into the product of two independent functions:
+\begin{equation}
+\phi(r, \theta, \varphi) = R_{nl}(r) \cdot Y_{lm}(\theta, \varphi)
+\end{equation}
+Where:
+\begin{itemize}
+\item $R_{nl}(r)$ is the \textbf{radial part} of the wave function, which depends solely on the distance from the nucleus $r$. Its functional form is linked to the Laguerre polynomials.
+\item $Y_{lm}(\theta, \varphi)$ is the \textbf{angular part}, which depends on the angular coordinates $\theta$ (colatitude) and $\varphi$ (azimuth). These functions are mathematically known as \textbf{Spherical Harmonics}.
+\end{itemize}
+
+(A personal note: historically I have always drawn the $Y$ symbol of spherical harmonics starting from the opposite direction compared to the norm. No one ever corrected me until university, so forgive me if my handwriting of the "Y" on the blackboard appears unusual!).
+
+\section{Stationary States and Eigenvalues}
+
+This mathematical decomposition returns exactly the \textbf{stationary states} we were discussing earlier. These states are simultaneous eigenfunctions of the operators $H$, $L^2$, and $L_z$.
+Applying these operators to the angular part $Y_{lm}$ (or to the complete wave function $\phi$), we obtain the respective eigenvalues:
+
+\begin{enumerate}
+\item \textbf{Squared magnitude of the angular momentum ($L^2$)}:
+\begin{equation}
+L^2 \phi = l(l+1)\hbar^2 \phi
+\end{equation}
+(One is often tempted to say that the eigenvalue of $L^2$ is simply $l^2 \hbar^2$, but the rigorous quantum derivation imposes the factor $l(l+1)$).
+
+
+\item \textbf{Z component of the angular momentum ($L\_z$)}:
+\begin{equation}
+L_z \phi = m \hbar \phi
+\end{equation}
+
+
+\end{enumerate}
+
+\subsection{Quantum Numbers}
+
+The equations just written introduce three fundamental numbers that govern atomic structure. They are the \textbf{quantum numbers}, which you have certainly studied in chemistry:
+
+\begin{itemize}
+\item $n$: \textbf{Principal quantum number}. Determines the energy level and the size of the orbital.
+\begin{equation}
+n = 1, 2, 3, \ldots, \infty
+\end{equation}
+
+
+```
+
+\item $l$: \textbf{Angular momentum quantum number} (or azimuthal/orbital). Defines the shape of the orbital. It is strictly limited by the value of $n$:
+\begin{equation}
+l = 0, 1, 2, \ldots, (n-1)
+\end{equation}
+
+\item $m$ (or $m_l$): \textbf{Magnetic quantum number}. Defines the projection of the angular momentum (the orientation of the orbital) along the z-axis. It is limited by the value of $l$:
+\begin{equation}
+m = 0, \pm 1, \pm 2, \ldots, \pm l
+\end{equation}
+(It therefore assumes $2l+1$ integer values between $-l$ and $+l$).
+
+```
+
+\end{itemize}
+
+\section{Energy Eigenvalues and Spectroscopic Units of Measurement}
+
+The resolution of the radial part of the Schrödinger equation provides us with the eigenvalues for the Hamiltonian operator, that is, the \textbf{energy levels} of the hydrogen-like system:
+\begin{equation}
+E_n = - \frac{\mu Z^2 e^4}{2 \hbar^2 n^2}
+\end{equation}
+These eigenvalues correspond exactly to those derived in Bohr's semi-classical theory.
+
+In spectroscopy, it is standard practice to group the constant terms into dedicated units of measurement to streamline calculations.
+\begin{itemize}
+\item \textbf{Atomic unit of energy}: the block of constants $\frac{\mu e^4}{\hbar^2}$ represents the atomic unit of energy (linked to the Hartree).
+\item \textbf{Rydberg energy ($Ry$)}: is defined as the binding energy of the ground state of hydrogen.
+\begin{equation}
+Ry = \frac{\mu e^4}{2 \hbar^2} \approx 13.6 \text{ eV}
+\end{equation}
+Therefore, the energy levels can be rewritten in the compact form:
+\begin{equation}
+E_n = - Ry \frac{Z^2}{n^2}
+\end{equation}
+\end{itemize}
+
+\subsection{Wavenumber}
+
+In the spectroscopic field, the energy of transitions is very often measured not in Joules or eV, but in \textbf{wavenumbers}, conventionally indicated with the letter $\sigma$ (or $\tilde{\nu}$).
+The wavenumber is defined as the reciprocal of the wavelength ($\lambda$):
+\begin{equation}
+\sigma = \frac{1}{\lambda}
+\end{equation}
+It is generally expressed in $\text{cm}^{-1}$. This value is directly proportional to the energy of the photon transition ($E = hc\sigma$) and is the standard operational parameter in spectroscopic tables.
+
+\subsection{Ionization Potential}
+
+Before moving on to the practical part, let us formally define the \textbf{Ionization Potential} ($E_i$ or $IP$).
+Ionization energy is the energy required to tear the electron from its ground state and bring it to an infinite distance from the nucleus (where the potential energy is zero).
+Mathematically it is the difference between the energy at infinite distance ($n = \infty$) and the energy of the ground state ($n = 1$):
+\begin{equation}
+E_i = E_{\infty} - E_1 = 0 - \left( - Ry \frac{Z^2}{1^2} \right) = Ry \cdot Z^2
+\end{equation}
+For the hydrogen atom ($Z=1$), the ionization potential coincides exactly with the Rydberg constant ($13.6 \text{ eV}$).
+
+\section{Electron Configuration and Orbital Nomenclature}
+
+At this point, having introduced the quantum numbers, we possess the tools to trace the structure of energy levels, not only of the hydrogen-like atom, but of all multi-electron atoms.
+
+The \textbf{Electron Configuration} (Configuration of an electron) is uniquely defined by the pair of quantum numbers:
+\begin{equation}
+(n, l)
+\end{equation}
+There is no need to specify $m$ to define the isolated energy level or sublevel (in the absence of external magnetic fields that remove degeneracy).
+
+Furthermore, it is a historical convention (deriving from the first spectroscopic observations) to associate the angular quantum number $l$ not with a number, but with a specific \textbf{letter of the alphabet}, thus defining the \textbf{orbital}.
+The sequence of letters as a function of the value of $l$ is as follows:
+\begin{itemize}
+\item $l = 0 \longrightarrow \textbf{s}$
+\item $l = 1 \longrightarrow \textbf{p}$
+\item $l = 2 \longrightarrow \textbf{d}$
+\item $l = 3 \longrightarrow \textbf{f}$
+\item $l = 4 \longrightarrow \textbf{g}$
+\item $l = 5 \longrightarrow \textbf{h}$
+\end{itemize}
+The sequence continues in alphabetical order ($i, k, \ldots$ omitting the $j$).
+In astrophysical or chemical practice, you will hardly encounter ions that occupy orbitals with very high $l$ in the ground state (however, in highly excited states typical of plasmas or in recombination lines, you will be able to observe transitions involving $h$ orbitals or higher).
+
+\section{Orbital Filling Rules and Spectroscopic Nomenclature}
+
+It might seem like an academic detail, but it is essential to know that there are orbitals (like the $h$ orbitals) which, although not populated in the ground state, provide a fundamental contribution in the complex atomic models that electrons can access in the excited states of a real plasma.
+
+Let's operationally define an \textbf{orbital}. We have said that the configuration of an electron is determined by the principal quantum number $n$ and the angular one $l$.
+Let's resume the simplest example:
+\begin{itemize}
+\item $n = 1$
+\item $l = 0$
+\end{itemize}
+The configuration of this orbital will be written: \textbf{1s}.
+
+\subsection{Practical Examples of Electron Configurations (Neutral Atoms)}
+
+Let's now do some simple practical exercises to refresh your memory on how configurations are built. Arm yourselves with your periodic table. We will start with neutral atoms.
+
+Let's recall two fundamental rules:
+\begin{enumerate}
+\item Every orbital (or rather, every sublevel defined by $l$) can host a maximum number of electrons, dictated by the Pauli Exclusion Principle ($2(2l+1)$ electrons).
+\begin{itemize}
+\item \textbf{s} sublevel ($l=0$): maximum \textbf{2} electrons.
+\item \textbf{p} sublevel ($l=1$): maximum \textbf{6} electrons.
+\item \textbf{d} sublevel ($l=2$): maximum \textbf{10} electrons.
+\end{itemize}
+\item The superscript next to the orbital letter indicates the number of electrons contained in it.
+\end{enumerate}
+
+Let's proceed with the list of elements:
+
+\begin{enumerate}
+\item \textbf{Hydrogen (H)}
+\begin{itemize}
+\item Atomic number $Z = 1$ (1 proton, 1 electron).
+\item Configuration: \textbf{$1s^1$}
+\end{itemize}
+
+
+```
+
+\item \textbf{Helium (He)}
+\begin{itemize}
+\item Atomic number $Z = 2$ (2 protons, 2 electrons).
+\item Configuration: \textbf{$1s^2$} (The $n=1$ level is now full).
+\end{itemize}
+
+\item \textbf{Lithium (Li)}
+\begin{itemize}
+\item Atomic number $Z = 3$ (3 protons, 3 electrons).
+\item Configuration: \textbf{$1s^2 \, 2s^1$}
+\end{itemize}
+
+\item \textbf{Carbon (C)} and \textbf{Oxygen (O)} (Crucial elements in astrophysics)
+\begin{itemize}
+\item Carbon ($Z = 6$): \textbf{$1s^2 \, 2s^2 \, 2p^2$}
+\item Oxygen ($Z = 8$): \textbf{$1s^2 \, 2s^2 \, 2p^4$}
+\end{itemize}
+
+\end{enumerate}
+
+\subsection{Digression: Atomic Number and Atomic Mass (Isotopes for Fusion)}
+
+Let's make a quick terminological parenthesis. The number $Z$ represents the \textbf{Atomic Number}, that is, the number of protons in the nucleus.
+It should not be confused with the \textbf{Atomic Mass}, which is given by the sum of the number of protons and the number of neutrons ($A = Z + N$).
+
+Standard hydrogen (whose nucleus is a single proton) has zero neutrons. But its \textbf{isotopes} exist:
+\begin{itemize}
+\item \textbf{Deuterium}: has 1 proton and 1 neutron.
+\item \textbf{Tritium}: has 1 proton and 2 neutrons (and is radioactive).
+\end{itemize}
+I mentioned deuterium and tritium because, in laboratory plasmas for controlled thermonuclear fusion, ordinary hydrogen is not used, but rather a mixture of deuterium and tritium, which is much more efficient for triggering fusion reactions.
+
+\subsection{Exceptions in the Filling Order: Iron (Fe)}
+
+Returning to configurations, let's look at \textbf{Iron (Fe)}, which has atomic number \textbf{$Z = 26$}.
+Following the Aufbau Principle (progressive construction), we fill the orbitals according to the scale of increasing energies:
+\begin{itemize}
+\item $1s^2 \quad 2s^2 \quad 2p^6 \quad 3s^2 \quad 3p^6$ (we have reached 18 electrons, Argon).
+\item At this point, there are 8 electrons left to place.
+\end{itemize}
+From a strictly energetic point of view, the $4s$ orbital fills \textit{before} the $3d$ orbital because it has a slightly lower energy in the neutral ground state. We would therefore have: $4s^2 \, 3d^6$.
+
+However, especially in \textbf{astrophysics and spectroscopy}, it is common practice to write the configuration keeping the levels ordered based on the principal quantum number $n$, regardless of energy. Therefore we will write:
+\begin{equation}
+1s^2 , 2s^2 , 2p^6 , 3s^2 , 3p^6 , 3d^6 , 4s^2
+\end{equation}
+Notice how the $3d$ orbital, which can hold up to 10 electrons, contains only 6, despite being followed by the full $4s$. Both notations (energetic order or order by principal quantum number) are acceptable for the purposes of this course, provided the count and the electronic assignment are exact.
+What you must assimilate is that the energetic order of the levels ($3d$ vs $4s$) \textbf{is not an absolute dogma}, but depends critically on the density, temperature, and ionization state of the plasma (energy levels crossing).
+
+\section{Electron Configurations of Astrophysical Ions}
+
+As reiterated previously, in space astrophysics (with the exception of cold nebulae) neutral matter is almost non-existent. One exclusively observes plasma, that is, ionized matter. We must learn to write the configurations of ions.
+
+Let's consider an extreme case, much observed in solar flares: \textbf{Iron Twenty (Fe XX)}.
+This ion presents intense emission lines at extremely high temperatures.
+\begin{itemize}
+\item The symbol \textbf{Fe XX} (spectroscopic notation) indicates Iron ionized 19 times (charge \textbf{$+19$}).
+\item Neutral Iron has 26 electrons. Removing 19, \textbf{7} remain.
+\end{itemize}
+
+We are faced with an Iron nucleus ($Z=26$) around which only 7 electrons orbit.
+Which neutral element has 7 electrons? \textbf{Nitrogen (N)}.
+We can therefore state that Fe XX belongs to the \textbf{isoelectronic sequence of Nitrogen} (Nitrogen-like ion).
+Fe XX behaves spectroscopically in a similar way to neutral Nitrogen, while not being identical at all. The difference lies in the nucleus: the Fe XX nucleus has 26 protons, exerting an enormously more intense Coulomb potential on the 7 electrons compared to the 7 protons of the Nitrogen nucleus. The energy of the levels will therefore be very different, but the structure of the valence electron configuration will be equivalent.
+
+Let's write the configuration for Fe XX, placing its 7 electrons:
+\begin{equation}
+1s^2 , 2s^2 , 2p^3
+\end{equation}
+This simple calculation is the basis for defining the spectral lines that this ion will produce. All possible spectral terms and multiplets that make up the observable spectrum derive from this basic configuration.
+
+```latex
+\section{Essential Resources: The NIST Database}
+
+For anyone intending to analyze real spectroscopic data, it is indispensable to know and know how to query atomic databases.
+The global reference database for spectroscopy is the \textbf{NIST Atomic Spectra Database} (National Institute of Standards and Technology).
+I invite you to memorize its use or save the link. It collects the data of all spectral lines observed and measured in the laboratory, as well as theoretical models for atomic energy levels.
+
+\textit{(Side note for the current context: The management of large international atomic databases is complex and dependent on state public funding. Historically these servers, including NIST and associated databases like NRL, relied on funds from American universities (e.g., Harvard) or government institutions (e.g., NASA). The recent drastic cuts to research budgets have caused delays in updates - for example, the latest updates visible on the portal date back to 2024 - or physical transfers of servers between various world research institutes. Fortunately, at the moment the service remains operational and is the pillar of our discipline, working in synergy with other immense open-source libraries developed mainly between the USA and the UK, such as the astrophysical database \textbf{CHIANTI}).}
+
+\subsection{Example of a NIST Database Query}
+
+I will briefly show you how to extract data from the portal:
+\begin{enumerate}
+\item From the main page, select the "Lines" section.
+\item The ionic species is requested. Enter the ion of interest \textbf{using spectroscopic notation}. Type, for example: \texttt{Fe XX}.
+\item Select the \textbf{wavelength} range. In the astrophysical EUV or optical field, the convention is to use \textbf{\text{\AA}ngströms (\text{\AA})} (alternatively, nanometers or micrometers for the infrared).
+\item Set the lower and upper limits of the investigation range.
+\end{enumerate}
+Upon submitting the query (Retrieve Data), the system will return a table containing all the known transitions for that interval, specifying the relative intensity, the transition probabilities, and the exact configurations of the upper and lower levels between which the quantum leap occurs. This is the diagnostic tool with which you will inevitably have to familiarize yourselves.
+
+\section{Navigating the NIST Database}
+
+Let's pick up the discussion on the \textbf{NIST Atomic Spectra Database}. Once the query is executed for a given ion (for example Fe XX) in the desired wavelength range, the system returns a table structured in columns.
+In this phase, we will momentarily ignore some columns to focus on those fundamental for our analysis.
+
+Here are the key columns you must know how to read:
+\begin{itemize}
+\item \textbf{Wavelength ($\lambda$)}: Usually expressed in \text{\AA}ngströms or nanometers, depending on the chosen settings.
+\item \textbf{Energy Levels}: This column shows the energies of the lower level and the upper level involved in the transition.
+\item \textbf{Configuration}: This is the crucial column for the topic covered today. It shows you the exact electron configuration of the state. For example, you might read $1s^2\, 2s^2\, 2p^3$ for the ground state of Fe XX, or excited configurations in which an electron has "jumped" to a higher level. (Note: often in databases for heavy ions, the inner closed "cores" are omitted for brevity, focusing on valence electrons).
+\item \textbf{Term} and \textbf{Total Angular Momentum ($J$)}: Columns that exactly define the quantum state, concepts we will address in detail later (e.g., triplet, singlet, ground or excited state).
+\end{itemize}
+
+In addition to spectral lines (Lines), NIST allows you to directly query \textbf{Energy Levels (Levels)}.
+Returning to the main menu, you can select "Levels" and enter your ion. In this form, you can customize the output:
+\begin{itemize}
+\item \textbf{Energy Unit}: You can choose between Wavenumbers ($\text{cm}^{-1}$), Electron volts ($\text{eV}$), Rydbergs, or frequency. For high-energy plasmas, the eV is often a compact and convenient choice.
+\item \textbf{Table Format}: It is possible to order the levels by increasing energy, grouping them based on the configuration and the spectral term.
+\end{itemize}
+
+It is fundamental to familiarize yourselves with this tool, since radiative transitions (emission/absorption) obey precise quantum \textbf{Selection Rules} that determine which "jumps" between an upper and a lower level are allowed or forbidden. This database condenses the entire theoretical scaffolding into directly usable data. If you search Google for "\textit{NIST atomic database}", the first result will be the correct one.
+
+\section{Practical Exercise: Writing Configurations}
+
+Before closing, I leave you with three simple exercises on electron configurations, similar to the examples done a little while ago. The goal is to consolidate the concepts discussed today, in preparation for the next lecture. You can do them at home (they will require no more than 15 minutes) or we can check them together next time.
+
+Write the ground electron configuration and identify the isoelectronic sequence for the following ions:
+\begin{enumerate}
+\item \textbf{Mg X} (Magnesium ionized 9 times). Data: $Z_{\text{Mg}} = 12$.
+\item \textbf{Si XII} (Silicon ionized 11 times). Data: $Z_{\text{Si}} = 14$.
+\item \textbf{S XIV} (Sulfur ionized 13 times). Data: $Z_{\text{S}} = 16$.
+\end{enumerate}
+
+(Note: pay close attention to the relationship between spectroscopic notation and the number of lost electrons, to calculate how many electrons actually remain on the orbit).
+
+\subsection{The Usefulness of Exercises vs Artificial Intelligence}
+
+You are obviously aware that, if you feed this request to an Artificial Intelligence, it will return the exact solution to you in a fraction of a second. But the purpose of this exercise is not to passively obtain the result; it is to \textit{train reasoning}. Making the effort to derive the configuration manually, relaxing and applying the Aufbau rules, will allow you to internalize the atomic structure. AI will not take the exam for you nor will it interpret anomalous spectra for you in the laboratory. Take these 15 minutes of tranquility to solve them independently.
+
+\section{Logistical Communications and Next Lectures}
+
+Our next lecture will be held \textbf{next Monday}. As I informed you at the beginning of the course, this Thursday I will be out of town, therefore the lecture is canceled.
+
+In the meantime:
+\begin{itemize}
+\item I will try to reorganize my handwritten notes, in order to share them with you to provide you with more structured support compared to the simple raw digital file.
+\item If I don't manage to do it in time, I will anyway share the digital files of the blackboards (OneNote) and, in any case, I strongly invite you to \textbf{take your own notes} during the lectures, integrating them with the audio/video recordings that will be made available.
+\end{itemize}
+
+Are there any questions on what was covered today?
+If everything is perfectly clear, I wish you a good weekend and I will see you on Monday.
+
+```
