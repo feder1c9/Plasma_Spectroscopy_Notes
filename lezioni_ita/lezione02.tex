@@ -1,0 +1,699 @@
+\chapter{Lezione 2 - 05-10-2026}
+
+\section{Testi di Riferimento e Approccio allo Studio}
+
+Questo libro di testo è piuttosto ostico, tuttavia risulta estremamente completo ed esaustivo. A onor del vero, ne ho scoperto l'esistenza solamente durante il terzo anno del mio corso di laurea. Attualmente ho depositato una copia del volume presso la biblioteca della scuola universitaria (la Scuola Superiore di Catania, per la precisione). Vi invito caldamente a verificarne la disponibilità in biblioteca, essendo stato il testo su cui mi sono preparato per la prima volta su questi argomenti.
+
+Durante la lezione, adotterò un approccio alla lavagna, scrivendo fisicamente gli appunti, come se mi trovassi al vostro posto. Questo perché il mio intento è procedere seguendo la medesima impostazione che adotterei se fossi io stesso uno studente.
+
+\section{Richiami di Meccanica Quantistica}
+
+Per la lezione odierna, so bene che avete tutti già sostenuto esami riguardanti la Meccanica Quantistica (o, in alcuni ordinamenti triennali, insegnamenti affini all'interno di Metodi Matematici della Fisica o Struttura della Materia). Tuttavia, ritengo indispensabile richiamare alcuni concetti fondamentali che costituiranno l'ossatura teorica della spettroscopia dei plasmi. Partiremo in modo diretto.
+
+\subsection{Osservabili Fisiche}
+
+Il punto di partenza è definire le grandezze necessarie per descrivere il nostro sistema fisico. Dal punto di vista fisico, abbiamo bisogno di entità matematiche capaci di quantificare le proprietà misurabili.
+
+Ciò che si misura sperimentalmente è definito \textbf{osservabile} (observable).
+Un'osservabile è uno specifico numero che esprime il valore di una \textbf{variabile dinamica} (dynamic variable). Esempi classici di variabili dinamiche sono:
+\begin{itemize}
+\item La \textbf{posizione} (le coordinate spaziali).
+\item La quantità di moto o \textbf{momento} (momentum).
+\end{itemize}
+Non credo abbiate difficoltà né con la nomenclatura né con il concetto fisico sottostante.
+
+\subsection{L'Operatore Lineare ed Hermitiano}
+
+In meccanica quantistica, ogni osservabile è matematicamente rappresentata da un \textbf{operatore} (operator). L'operatore agisce sullo \textbf{stato del sistema}.
+
+Lo stato del sistema è tipicamente descritto da una funzione matematica alla quale assegniamo una lettera greca, comunemente $\psi$ (psi) o $\phi$ (phi). Scegliete la notazione che preferite, l'importante è la coerenza.
+
+Un operatore è, di fatto, una regola matematica che, applicata a una specifica funzione di stato $\psi$, la converte in una nuova funzione $\psi'$.
+L'equazione fondamentale agli autovalori si scrive nella forma:
+\begin{equation}
+\alpha \psi = a \psi
+\end{equation}
+Dove:
+\begin{itemize}
+\item $\alpha$ rappresenta l'operatore (che chiameremo \textbf{operatore lineare hermitiano}).
+\item $\psi$ è l'autofunzione (eigenfunction).
+\item $a$ è il numero (scalare) che rappresenta l'autovalore (eigenvalue) corrispondente all'osservabile misurata.
+\end{itemize}
+
+Esistono svariate convenzioni notazionali per gli operatori. Invece di usare le lettere greche come $\alpha$, potreste trovare gli operatori indicati con lettere latine maiuscole dotate di un accento circonflesso (il \textit{cappello} o \textit{cap}), ad esempio:
+\begin{equation}
+\hat{A} \psi = a \psi
+\end{equation}
+Non essendoci una notazione univoca in letteratura, utilizzeremo le forme che risulteranno via via più comode, purché il contesto sia chiaro.
+
+\subsection{Proprietà degli Operatori: Linearità}
+
+Non avendo sottomano il programma esatto del vostro corso di laurea triennale, rivediamo rapidamente cosa significa che un operatore è \textbf{lineare} (linear).
+
+Un operatore $A$ si definisce lineare se, prese due generiche funzioni $\psi_r$ e $\psi_s$ e una costante $a$, vale la seguente proprietà distributiva:
+\begin{equation}
+A (a\psi_r + a\psi_s) = a A \psi_r + a A \psi_s
+\end{equation}
+Nel caso più generale, con costanti differenti $a$ e $b$ associate alle rispettive funzioni, la condizione di linearità per un operatore $\alpha$ si esprime rigorosamente come:
+\begin{equation}
+\alpha (a\psi_r + b\psi_s) = a \alpha \psi_r + b \alpha \psi_s
+\end{equation}
+
+\subsection{Proprietà degli Operatori: Hermitianità}
+
+La seconda proprietà fondamentale è l'\textbf{hermitianità}.
+Un operatore $A$ si definisce \textbf{Hermitiano} (Hermitian) se coincide con il suo operatore aggiunto (adjoint operator). L'operatore aggiunto è indicato solitamente con un apice a forma di daga ($^\dagger$, letto comunemente "dagger" in inglese).
+Pertanto, la condizione di hermitianità si scrive:
+\begin{equation}
+A = A^\dagger
+\end{equation}
+Sono concetti basilari, che quasi certamente avrete incontrato e applicato numerose volte, ma che è imprescindibile avere ben saldi nella memoria per proseguire.
+
+\section{Autovalori, Autostati e Misurazioni Fisiche}
+
+Introduciamo un autovalore $\alpha'$, in corrispondenza del quale possiamo scrivere la seguente equazione:
+\begin{equation}
+\alpha \psi = \alpha' \psi
+\end{equation}
+Questa è esattamente la stessa equazione introdotta in precedenza, scritta in un modo diverso. L'obiettivo qui è abituarvi a utilizzare lettere e notazioni differenti per indicare lo stesso concetto, in modo che possiate essere più flessibili e riconoscere la struttura fisica indipendentemente dal formalismo adottato.
+
+Il parametro $\alpha'$ (l'autovalore) può essere:
+\begin{itemize}
+\item Un \textbf{numero discreto} (es. $1, 2, 3$).
+\item Un valore \textbf{continuo} (rappresentato quindi come una funzione).
+\end{itemize}
+
+Tutte le funzioni $\psi$ che soddisfano questa particolare equazione per un dato operatore prendono il nome di \textbf{autostati} (eigenstates). Per gli autostati $\psi$ che soddisfano l'equazione rispetto a uno specifico $\alpha'$, diciamo formalmente che "appartengono all'autovalore $\alpha'$". Spesso, per esplicitare questo legame, li indicheremo con la notazione indicizzata:
+\begin{equation}
+\alpha \psi_{\alpha'} = \alpha' \psi_{\alpha'}
+\end{equation}
+
+Vi è un altro punto di cruciale importanza. Poiché l'esito di una misurazione fisica reale deve necessariamente fornire un risultato appartenente al campo dei numeri reali per ogni possibile stato $\psi$, ne consegue che \textbf{tutte le grandezze fisicamente misurabili sono rappresentate da autovalori reali}.
+Sottolineo questo aspetto perché il formalismo quantistico appare profondamente teorico e astratto. Quando si operano calcoli su questi oggetti matematici, è facile smarrirne il significato pratico; tuttavia, ricordate sempre che queste \textit{osservabili reali} si traducono in misurazioni sperimentali dirette: la quantità di moto (momentum), la posizione e l'energia.
+
+\section{Lo Spettro dell'Operatore e la Continuità}
+
+Ecco l'elemento fondamentale: l'insieme completo (the full set) di tutti gli autovalori di un operatore $\alpha$ prende il nome di \textbf{Spettro} di $\alpha$ (Spectrum of $\alpha$).
+
+Questo concetto vi fornisce la chiave di lettura per collegare la matematica astratta a ciò di cui discutevamo la volta scorsa riguardo all'intensità dello spettro elettromagnetico. Abbiamo detto che lo spettro si manifesta essenzialmente in due modi:
+\begin{itemize}
+\item Discreto: originando \textbf{righe spettrali} (lines).
+\item Continuo: originando uno spettro continuo.
+\end{itemize}
+
+Consideriamo un'osservabile (che d'ora in poi indicheremo con la lettera $\omega$) il cui insieme di autovalori non sia puramente discreto, ma risulti \textbf{interamente o parzialmente continuo}.
+In questo caso, gli autostati $\psi$ apparterranno a valori (chiamiamoli $\omega'$) posizionati in un intervallo continuo e non su livelli discreti.
+
+In uno spettro continuo, la condizione di normalizzazione tra gli stati $\psi_{\omega'}$ e $\psi_{\omega''}$ non può più avvalersi del Delta di Kronecker, ma deve essere riscritta in questo modo:
+\begin{equation}
+\int \psi_{\omega'}^* \psi_{\omega''} , d\tau = \delta(\omega' - \omega'')
+\end{equation}
+
+La funzione a secondo membro è la \textbf{Funzione Delta di Dirac} ($\delta(x)$).
+Questa è una distribuzione matematica particolare, definita dalle seguenti proprietà (ponendo per semplicità $x = \omega' - \omega''$):
+\begin{equation}
+\delta(x) =
+\begin{cases}
+0 & \text{per } x \neq 0 \
++\infty & \text{per } x = 0
+\end{cases}
+\end{equation}
+Soggetta alla condizione di normalizzazione integrale:
+\begin{equation}
+\int_{-\infty}^{+\infty} \delta(x) , dx = 1
+\end{equation}
+
+\section{Le Rappresentazioni: L'Approccio di Schrödinger e Dirac}
+
+In meccanica quantistica esistono svariate rappresentazioni formali per descrivere esattamente lo stesso fenomeno. Si può utilizzare la formulazione differenziale, le matrici, e così via. Tutte convergono nello stesso risultato: descrivere l'evoluzione degli autostati e degli autovalori sotto l'azione degli operatori.
+
+Procediamo a rivedere queste rappresentazioni per reintrodurre gradualmente le variabili che ci saranno necessarie.
+
+\subsection{Dalla Funzione d'Onda alla Notazione Bra-Ket}
+
+Concentriamoci sulla Rappresentazione di Schrödinger classica applicata alla notazione vettoriale.
+Consideriamo un integrale standard della meccanica ondulatoria, il calcolo del valore di aspettazione (o elemento di matrice):
+\begin{equation}
+\int \psi^* A \psi , d\tau
+\end{equation}
+
+Come possiamo condensare questa informazione? Facendo ricorso al \textbf{Bra} e al \textbf{Ket} (la notazione introdotta da Paul Dirac).
+\begin{itemize}
+\item Il vettore colonna, che rappresenta la funzione d'onda standard $\psi$, è chiamato \textbf{Ket} e si indica come $\ket{\psi}$.
+\item Il vettore riga complesso coniugato, $\psi^*$, è chiamato \textbf{Bra} e si indica come $\bra{\psi}$.
+\end{itemize}
+
+Quando li si unisce attorno a un operatore $A$, otteniamo la formulazione:
+\begin{equation}
+\bra{\psi} A \ket{\psi}
+\end{equation}
+Questa notazione, che all'apparenza può sembrare ermetica, è \textbf{esattamente equivalente} all'integrale $\int \psi^* A \psi \, d\tau$. L'unica differenza risiede nel fatto che non si esplicita la dipendenza spaziale della funzione $\psi(x)$ o del suo complesso coniugato $\psi^*(x)$ all'interno dell'integrale; si trattano le funzioni direttamente come entità vettoriali o matriciali (vettori di stato).
+
+Se provate a inserire la dipendenza da una variabile, ad esempio dalle coordinate $x$ e dal tempo $t$, questa equivalenza vi risulterà ancora più limpida. Il passaggio matematico è lo stesso in cui vi sarete già imbattuti affrontando i corsi base di MQ. Questo serve unicamente come promemoria, per uniformare la nomenclatura e garantirci che tutti comprendano il formalismo che adotterò in classe, evitando a voi di dover compulsare in fretta vecchi appunti in caso di amnesie temporanee.
+
+\section{Le Regole della Meccanica Quantistica}
+
+Definita la notazione, entriamo nel vivo analizzando i princìpi fondamentali della meccanica quantistica applicata alle variabili cinematiche e termodinamiche.
+
+\subsection{Coordinate e Momento Coniugato}
+
+Consideriamo un sistema di coordinate Cartesiane. Per generalizzare ed estendere il concetto in dimensione $N$, indicheremo le coordinate come $x_1, x_2, \ldots, x_{3N}$ (piuttosto che usare $x, y, z$).
+In concomitanza, definiamo il \textbf{momento coniugato} (conjugated momentum) associato, indicato con $p_1, p_2, \ldots, p_{3N}$.
+
+Queste due grandezze (coordinate e momenti coniugati) costituiscono la spina dorsale della cinematica, e in regime quantistico obbediscono a precise \textbf{Regole di Commutazione} (commutation rules). Ricordiamo la definizione di \textbf{commutatore} tra due operatori $A$ e $B$:
+\begin{equation}
+[A, B] = AB - BA
+\end{equation}
+
+Per gli operatori di posizione e momento, le regole si esplicitano come segue:
+\begin{itemize}
+\item Commutatore tra le componenti spaziali:
+\begin{equation}
+[x_i, x_j] = x_i x_j - x_j x_i = 0
+\end{equation}
+\item Commutatore tra i momenti coniugati:
+\begin{equation}
+[p_i, p_j] = p_i p_j - p_j p_i = 0
+\end{equation}
+\item Commutatore incrociato tra posizione e momento (Relazione di Indeterminazione di Heisenberg formale):
+\begin{equation}
+[x_i, p_j] = x_i p_j - p_j x_i = i \hbar \delta_{ij}
+\end{equation}
+(Dove $i$ è l'unità immaginaria e $\hbar$ è la costante di Planck ridotta).
+\end{itemize}
+
+\subsection{L'Hamiltoniana e l'Evoluzione Temporale}
+
+Esattamente in analogia con l'energia totale di un sistema in meccanica classica, in meccanica quantistica definiamo la \textbf{funzione Hamiltoniana} (Hamiltonian function), comunemente indicata con la lettera $H$.
+
+L'Hamiltoniana è una funzione dipendente sia dai momenti $p$ che dalle coordinate $x$. Mentre in fisica classica essa fornisce le equazioni del moto di Hamilton, nella teoria quantistica l'operatore Hamiltoniano determina in modo deterministico l'evoluzione dello stato del sistema nel tempo.
+
+Riprendendo la struttura formale (sostituendo l'operatore generico $\alpha$ usato finora con l'Hamiltoniano $H$), l'equazione del moto si ricava definendo la derivata dello stato quantistico rispetto al tempo. Questa è la celeberrima \textbf{Equazione di Schrödinger dipendente dal tempo}:
+\begin{equation}
+i \hbar \frac{\partial \psi}{\partial t} = H \psi
+\end{equation}
+
+Quando applichiamo l'operatore Hamiltoniano $H$ a uno specifico stato stazionario (un autostato del sistema), esso restituisce l'autovalore energetico $E$ di quello stato, ovvero l'energia associata al fotone emesso o assorbito durante la transizione. La forma stazionaria (indipendente dal tempo) si riduce a:
+\begin{equation}
+H \psi = E \psi
+\end{equation}
+
+L'importanza dell'Hamiltoniana risiede nel fatto che è l'osservabile preposta a quantificare l'energia. Man mano che lo stato evolve nel tempo e la funzione d'onda muta fase, è l'applicazione dell'operatore $H$ a governare e quantizzare i livelli energetici associati al plasma e alla radiazione studiati.
+
+\section{Evoluzione Temporale e Stati Stazionari}
+
+Riprendendo la dipendenza temporale discussa in precedenza, l'equazione di Schrödinger dipendente dal tempo governa l'evoluzione dello stato del sistema:
+\begin{equation}
+i \hbar \frac{\partial \psi(x,t)}{\partial t} = H \psi(x,t)
+\end{equation}
+(Dove $H$ è l'operatore Hamiltoniano, preposto a definire l'energia, e la costante $\hbar = h / 2\pi$).
+
+L'evoluzione temporale di uno stato (per sistemi con Hamiltoniana non dipendente esplicitamente dal tempo) produce un fattore di fase. La derivata temporale porta all'esponenziale:
+\begin{equation}
+e^{-i \frac{E}{\hbar} t}
+\end{equation}
+Lo stato complesso coniugato $\psi^*$ esibirà il fattore di fase opposto:
+\begin{equation}
+e^{+i \frac{E}{\hbar} t}
+\end{equation}
+Per chiarire come evolve il sistema e in che modo l'Hamiltoniana definisca l'energia dello stato quantistico, consideriamo il calcolo del valore di aspettazione (expectation value) di una generica osservabile. Integrando sullo spazio:
+\begin{equation}
+\int \psi^*(x,t) A \psi(x,t) , d\tau
+\end{equation}
+Sostituendo la dipendenza temporale esplicita negli stati:
+\begin{equation}
+\int \left( \psi^*(x,0) e^{+i \frac{E}{\hbar} t} \right) A \left( \psi(x,0) e^{-i \frac{E}{\hbar} t} \right) d\tau
+\end{equation}
+Poiché l'operatore $A$ (se non dipende dal tempo) agisce solo sulla parte spaziale $\psi(x,0)$, gli esponenziali complessi con fase opposta si elidono ($e^{+i \frac{E}{\hbar} t} \cdot e^{-i \frac{E}{\hbar} t} = 1$).
+
+Il risultato ci mostra che il valore dell'osservabile misurata al tempo $t$ (stato finale) è **identico** al valore misurato al tempo $t=0$ (stato iniziale).
+Quando questo accade, ci troviamo in presenza di quello che viene definito uno \textbf{Stato Stazionario} (Stationary State), ovvero uno stato in cui le probabilità delle grandezze fisiche non mutano nel tempo.
+L'equazione che descrive questi stati è l'Equazione di Schrödinger indipendente dal tempo:
+\begin{equation}
+H \psi = E \psi
+\end{equation}
+Questa è la formula "amica" che incontreremo e utilizzeremo innumerevoli volte per ricavare i livelli energetici e spiegare l'emissione dei fotoni.
+
+\section{Lo Spettro Idrogenoide: Il Modello a Singolo Elettrone}
+
+Come accennato durante l'introduzione alla spettroscopia dei plasmi della lezione precedente, partiamo dal caso più basilare (che molti di voi avranno già incrociato in Struttura della Materia): lo spettro atomico a \textbf{singolo elettrone}.
+Questo non include esclusivamente l'atomo di idrogeno (H), ma abbraccia un'intera famiglia di ioni chiamati \textbf{Ioni Idrogenoidi} (Hydrogen-like atoms o H-like ions).
+
+Gli ioni idrogenoidi sono atomi di elementi più pesanti (presenti nella tavola periodica) che sono stati progressivamente ionizzati, perdendo i loro elettroni fino a rimanere con \textbf{un solo elettrone} in orbita attorno al nucleo.
+Poiché la loro struttura è ridotta a un nucleo e un solo elettrone, il loro comportamento fisico e le equazioni che li governano sono estremamente simili a quelli dell'idrogeno, sebbene l'attrazione coulombiana sia maggiore a causa del maggior numero di protoni nel nucleo.
+
+Un esempio classico: l'\textbf{Elio} (He). L'atomo neutro possiede 2 elettroni. Se perde un elettrone, diventa lo ione Elio ionizzato una volta. Siccome ha un solo elettrone rimanente, si comporta come uno ione idrogenoide.
+
+\subsection{Notazione Spettroscopica e Ionizzazione}
+
+Esiste una marcata differenza di notazione tra chimica e spettroscopia astrofisica per indicare gli ioni.
+\begin{itemize}
+\item \textbf{Notazione Chimica}: Lo stato di ionizzazione si indica ponendo i segni "più" in apice dopo il simbolo dell'elemento. L'Elio singolarmente ionizzato si scriverà $\text{He}^+$.
+\item \textbf{Notazione Spettroscopica}: In spettroscopia, l'atomo neutro non è indicato con lo zero, ma si fa partire il conteggio da "I" (uno in numeri romani). Lo stato ionizzato scala di conseguenza:
+\begin{itemize}
+\item Atomo neutro = I (es. $\text{H I}$, $\text{He I}$)
+\item Singolarmente ionizzato = II (es. $\text{He II}$, corrispondente all'$\text{He}^+$)
+\item Doppiamente ionizzato = III (es. $\text{Li III}$, corrispondente al $\text{Li}^{2+}$)
+\end{itemize}
+\end{itemize}
+Ad esempio, il \textbf{Litio} ($\text{Li}$), che di base possiede 3 elettroni ($\text{Z}=3$), per diventare idrogenoide deve perdere 2 elettroni, diventando $\text{Li}^{2+}$ in notazione chimica, che corrisponderà a \textbf{Li III} in notazione spettroscopica.
+
+Questo sistema numerico romano per la spettroscopia può inizialmente disorientare, in quanto l'esponente chimico della carica e l'indice spettroscopico sono sfasati di 1 unità ($n_{\text{spettroscopico}} = n_{\text{carica}} + 1$). Vi esorto a tenere sempre a portata di mano una \textbf{Tavola Periodica} durante queste lezioni. Sapere a memoria i numeri atomici $Z$ di ogni elemento non è un requisito del corso; la tavola periodica è lo strumento basilare del nostro mestiere.
+
+\section{Il Modello dell'Atomo Idrogenoide: Interazione Nucleo-Elettrone}
+
+Procediamo a modellizzare fisicamente il nostro sistema idrogenoide.
+Le componenti del nostro modello di base sono esclusivamente due:
+\begin{enumerate}
+\item Un \textbf{Nucleo} massivo, con carica netta positiva pari a $+Z e$ (dove $Z$ è il numero atomico, che per l'idrogeno neutro è $Z=1$, e $e$ è la carica elementare).
+\item Un \textbf{Singolo Elettrone}, con massa $m_e$ e carica $-e$.
+\end{enumerate}
+
+Le due particelle interagiscono unicamente tramite una forza di attrazione elettrostatica: la \textbf{Forza di Coulomb}. Trascurando il formalismo vettoriale vettoriale per un momento, il modulo della forza colombiana è espresso dalla legge di Coulomb:
+\begin{equation}
+F_C = \frac{1}{4\pi\varepsilon_0} \frac{(Ze)(e)}{r^2}
+\end{equation}
+Dove $r$ è la distanza radiale tra il nucleo e l'elettrone. Come si evince dall'equazione, la forza è proporzionale al prodotto delle cariche e inversamente proporzionale al quadrato della distanza.
+
+\subsection{La Massa Ridotta e il Problema dei Due Corpi}
+
+Il nucleo non è fisso nello spazio; sia il nucleo (con massa $m_p$, intendendo per semplicità la massa nucleare) sia l'elettrone (con massa $m_e$) si muovono attorno al loro comune centro di massa. Questo è il classico problema dei due corpi.
+
+Per semplificare l'analisi e ricondurre il problema al moto di una singola "particella" virtuale attorno a un centro fisso, in meccanica si introduce il concetto di \textbf{Massa Ridotta} (Reduced Mass), solitamente indicata con la lettera $\mu$:
+\begin{equation}
+\mu = \frac{m_e \cdot m_p}{m_e + m_p}
+\end{equation}
+
+Per capire quanto valga la massa ridotta, ricordiamo il valore della massa dell'elettrone. L'elettrone ha una massa $m_e \approx 9.1 \times 10^{-31} \text{ kg}$, che espressa in energia di riposo equivale a $\sim 0.511 \text{ MeV}$. La massa del protone (o del nucleo) è immensamente superiore (circa 1836 volte maggiore per l'idrogeno).
+Poiché $m_p \gg m_e$, possiamo dividere numeratore e denominatore dell'equazione della massa ridotta per $m_p$:
+\begin{equation}
+\mu = \frac{m_e}{1 + \frac{m_e}{m_p}}
+\end{equation}
+Poiché il termine $m_e/m_p$ tende a zero, l'equazione si semplifica e la massa ridotta coincide in prima approssimazione con la massa dell'elettrone:
+\begin{equation}
+\mu \approx m_e
+\end{equation}
+
+Questa approssimazione giustifica ampiamente l'assunto teorico di base in cui si considera il nucleo stazionario (al centro del sistema di coordinate) e si modella l'orbita del solo elettrone attorno ad esso.
+
+\subsection{Il Campo di Forza Centrale e il Potenziale Elettrostatico}
+
+A seguito dell'approssimazione sulla massa, l'elettrone può essere modellato come una particella in moto all'interno di un \textbf{campo di forza centrale} (Central Field, corrispondente al "campo a simmetria centrale" della meccanica analitica).
+
+In un campo centrale, l'energia potenziale $U$ (o $V$) non dipende dalla direzione angolare, ma è funzione esclusiva della distanza radiale $r$ dal centro di forza (il nucleo). Pertanto scriveremo:
+\begin{equation}
+U = U(r)
+\end{equation}
+L'energia potenziale elettrostatica per il sistema idrogenoide, derivante dall'integrazione della forza colombiana attrattiva, ha la ben nota forma:
+\begin{equation}
+U(r) = - \frac{1}{4\pi\varepsilon_0} \frac{Ze^2}{r}
+\end{equation}
+Il segno negativo indica che il potenziale è attrattivo: l'elettrone è "legato" al nucleo (formando una buca di potenziale) e occorre fornire energia al sistema per separare le due cariche all'infinito.
+
+\section{Il Modello dell'Atomo a Singolo Elettrone}
+
+Per definire il nostro modello di base per l'atomo a singolo elettrone (o ione idrogenoide), dobbiamo necessariamente introdurre alcune approssimazioni iniziali. Per non complicare eccessivamente la trattazione, assumeremo quanto segue:
+\begin{itemize}
+\item \textbf{Trascuriamo lo spin dell'elettrone} (e le relative interazioni elettromagnetiche ad esso associate).
+\item \textbf{Trascuriamo gli effetti relativistici}.
+\end{itemize}
+
+Sotto queste ipotesi, possiamo definire un'Hamiltoniana ($H$) relativamente semplice per descrivere il nostro atomo. Partendo dalla formulazione classica e passando alla meccanica quantistica, l'Hamiltoniana è espressa dalla somma dell'energia cinetica e dell'energia potenziale ($U$). In termini delle componenti della quantità di moto ($p_x, p_y, p_z$), avremo:
+\begin{equation}
+H = \frac{p_x^2 + p_y^2 + p_z^2}{2\mu} + U
+\end{equation}
+Ovvero, in forma più compatta:
+\begin{equation}
+H = \frac{p^2}{2\mu} + U
+\end{equation}
+Questa espressione quantistica descrive l'elettrone sfruttando la massa ridotta $\mu$ che abbiamo precedentemente definito.
+
+\subsection{Il Momento Angolare e le Regole di Commutazione}
+
+Oltre alla quantità di moto, dobbiamo considerare il \textbf{momento angolare} $\mathbf{L}$. È una grandezza che avete già incontrato nei corsi base di Fisica 1.
+Il momento angolare possiede tre componenti direzionali: $L_x, L_y, L_z$, a cui si aggiunge l'operatore modulo quadro $L^2$. (Nota notazionale: le coordinate spaziali possono essere indifferentemente indicate come $x, y, z$ oppure come $x_1, x_2, x_3$, la scelta è ininfluente per la fisica del problema).
+
+In meccanica quantistica, l'aspetto fondamentale risiede nelle proprietà di commutazione tra l'Hamiltoniana $H$, il modulo quadro del momento angolare $L^2$ e le singole componenti di $\mathbf{L}$.
+Non è possibile conoscere simultaneamente tutte le componenti direzionali del momento angolare, ma è possibile determinare $H$, $L^2$ e \textit{una sola} delle direzioni spaziali (convenzionalmente si sceglie $L_z$).
+
+Questo implica che i commutatori tra queste grandezze sono nulli:
+\begin{equation}
+[H, L^2] = 0
+\end{equation}
+\begin{equation}
+[H, L_z] = 0
+\end{equation}
+\begin{equation}
+[L^2, L_z] = 0
+\end{equation}
+
+Poiché questi operatori commutano tra loro, ciò che ricerchiamo sono gli \textbf{autostati simultanei} (simultaneous eigenstates) di $H$, $L^2$ e $L_z$.
+
+\section{Equazione di Schrödinger e Operatore Laplaciano}
+
+Per trovare questi autostati, passiamo alla \textbf{Rappresentazione di Schrödinger}. L'equazione di Schrödinger stazionaria si scrive come:
+\begin{equation}
+-\frac{\hbar^2}{2\mu} \nabla^2 \phi + U \phi = E \phi
+\end{equation}
+
+Permettetemi una digressione sulla notazione, poiché ho notato che lo scorso anno ha generato confusione. Nell'equazione compare il simbolo $\nabla^2$ (nabla quadro). In alcuni testi, o da parte di altri docenti, potreste vederlo indicato con un triangolo, ovvero $\Delta$.
+Sia $\nabla^2$ che $\Delta$ rappresentano lo stesso operatore: l'\textbf{operatore Laplaciano}. Sono formulazioni matematicamente identiche, si tratta solo di chiamarle o scriverle in modo diverso. In questo corso utilizzeremo la notazione con il nabla quadro ($\nabla^2$). Nell'equazione sopra, $\phi$ rappresenta la funzione d'onda dello stato, $U$ è l'energia potenziale ed $E$ è l'autovalore dell'energia.
+
+\subsection{Inserimento del Potenziale Coulombiano}
+
+Come definiamo l'energia potenziale $U$ nel campo Coulombiano?
+Come sapete da Fisica 1, l'energia potenziale deriva dalla forza. Poiché la forza di Coulomb è inversamente proporzionale al quadrato della distanza ($1/r^2$), l'energia potenziale (attrattiva) ad essa associata è proporzionale a $1/r$.
+
+Andiamo quindi a sostituire l'espressione esplicita del potenziale $U(r)$ all'interno della nostra equazione di Schrödinger:
+\begin{equation}
+-\frac{\hbar^2}{2\mu} \nabla^2 \phi + U(r) \phi = E \phi
+\end{equation}
+
+A questo punto, possiamo procedere con una riorganizzazione dei termini. Portiamo il termine $E \phi$ sul membro di sinistra per eguagliare l'equazione a zero e, all'occorrenza, cambiamo i segni raccogliendo la funzione d'onda $\phi$. Avremo:
+\begin{equation}
+\left( -\frac{\hbar^2}{2\mu} \nabla^2 + U(r) - E \right) \phi = 0
+\end{equation}
+
+In questa equazione, $r$ rappresenta la distanza radiale tra l'elettrone e il nucleo.
+Se vogliamo specializzare fin da subito l'equazione per l'atomo di idrogeno neutro, porremo il numero atomico $Z = 1$ all'interno dell'espressione di $U(r)$.
+
+A questo punto, con l'equazione differenziale correttamente impostata, faremo una breve pausa di 5 minuti prima di procedere con la sua risoluzione. Se ci sono domande fino a qui, sono a disposizione.
+
+\section{Risoluzione dell'Equazione di Schrödinger in Coordinate Polari}
+
+Il nostro scopo, adesso, è risolvere l'equazione di Schrödinger differenziale appena impostata per trovare gli autovalori dell'energia, del momento angolare e le funzioni d'onda associate.
+
+Come probabilmente saprete dall'analisi matematica e dalla meccanica quantistica, per risolvere agevolmente questo tipo di equazioni con potenziali a simmetria centrale (dove $U$ dipende solo da $r$), è necessario abbandonare le coordinate cartesiane e passare alle \textbf{coordinate polari sferiche} ($r, \theta, \varphi$).
+Questo cambio di coordinate è cruciale perché permette la \textbf{separazione delle variabili}.
+
+Non svolgeremo oggi tutti i passaggi analitici intermedi, poiché il fulcro di questa lezione sarà concentrarsi sulla costruzione delle configurazioni elettroniche (un esercizio più pratico ma di fondamentale importanza). Riscriviamo l'operatore Laplaciano $\nabla^2$ in coordinate sferiche polari per mostrare la struttura dell'equazione:
+\begin{equation}
+\left[ -\frac{\hbar^2}{2\mu} \left( \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2}{\partial \varphi^2} \right) - \frac{Ze^2}{r} \right] \phi = E \phi
+\end{equation}
+(Nota: il docente indica $U = -\frac{Ze^2}{r}$ in unità CGS di Gauss, omettendo il fattore $1/4\pi\varepsilon_0$ per compattezza, come tipico in ambito astrofisico/spettroscopico).
+
+\subsection{Separazione delle Variabili e Fattorizzazione della Funzione d'Onda}
+
+Sfruttando la simmetria del sistema, la soluzione $\phi(r, \theta, \varphi)$ può essere fattorizzata nel prodotto di due funzioni indipendenti:
+\begin{equation}
+\phi(r, \theta, \varphi) = R_{nl}(r) \cdot Y_{lm}(\theta, \varphi)
+\end{equation}
+Dove:
+\begin{itemize}
+\item $R_{nl}(r)$ è la \textbf{parte radiale} della funzione d'onda, che dipende unicamente dalla distanza dal nucleo $r$. La sua forma funzionale è legata ai polinomi di Laguerre.
+\item $Y_{lm}(\theta, \varphi)$ è la \textbf{parte angolare}, che dipende dalle coordinate angolari $\theta$ (colatitudine) e $\varphi$ (azimut). Queste funzioni sono matematicamente note come \textbf{Armoniche Sferiche} (Spherical Harmonics).
+\end{itemize}
+
+(Una nota personale: storicamente ho sempre tracciato il simbolo della $Y$ delle armoniche sferiche partendo dalla direzione opposta rispetto alla norma. Nessuno mi ha mai corretto fino all'università, quindi perdonatemi se la mia calligrafia della "Y" alla lavagna appare inusuale!).
+
+\section{Stati Stazionari e Autovalori}
+
+Questa scomposizione matematica ci restituisce esattamente gli \textbf{stati stazionari} di cui discutevamo poc'anzi. Questi stati sono autofunzioni simultanee degli operatori $H$, $L^2$ e $L_z$.
+Applicando questi operatori alla parte angolare $Y_{lm}$ (o alla funzione d'onda completa $\phi$), otteniamo i rispettivi autovalori:
+
+\begin{enumerate}
+\item \textbf{Modulo quadro del momento angolare ($L^2$)}:
+\begin{equation}
+L^2 \phi = l(l+1)\hbar^2 \phi
+\end{equation}
+(Spesso si è tentati di dire che l'autovalore di $L^2$ sia semplicemente $l^2 \hbar^2$, ma la derivazione quantistica rigorosa impone il fattore $l(l+1)$).
+
+```
+\item \textbf{Componente zeta del momento angolare ($L\_z$)}:
+\begin{equation}
+    L_z \phi = m \hbar \phi
+\end{equation}
+
+```
+
+\end{enumerate}
+
+\subsection{I Numeri Quantici}
+
+Le equazioni appena scritte introducono tre numeri fondamentali che governano la struttura atomica. Sono i \textbf{numeri quantici} (quantum numbers), che avete sicuramente studiato in chimica:
+
+\begin{itemize}
+\item $n$: \textbf{Numero quantico principale} (Principal quantum number). Determina il livello energetico e la dimensione dell'orbitale.
+\begin{equation}
+n = 1, 2, 3, \ldots, \infty
+\end{equation}
+
+```
+\item $l$: \textbf{Numero quantico del momento angolare} (o azimutale/orbitale). Definisce la forma dell'orbitale. È strettamente limitato dal valore di $n$:
+\begin{equation}
+    l = 0, 1, 2, \ldots, (n-1)
+\end{equation}
+
+\item $m$ (o $m_l$): \textbf{Numero quantico magnetico}. Definisce la proiezione del momento angolare (l'orientamento dell'orbitale) lungo l'asse z. È limitato dal valore di $l$:
+\begin{equation}
+    m = 0, \pm 1, \pm 2, \ldots, \pm l
+\end{equation}
+(Assume quindi $2l+1$ valori interi compresi tra $-l$ e $+l$).
+
+```
+
+\end{itemize}
+
+\section{Autovalori dell'Energia e Unità di Misura Spettroscopiche}
+
+La risoluzione della parte radiale dell'equazione di Schrödinger ci fornisce gli autovalori per l'operatore Hamiltoniano, ovvero i \textbf{livelli energetici} del sistema idrogenoide:
+\begin{equation}
+E_n = - \frac{\mu Z^2 e^4}{2 \hbar^2 n^2}
+\end{equation}
+Questi autovalori corrispondono esattamente a quelli derivati nella teoria semi-classica di Bohr.
+
+In spettroscopia è prassi raggruppare i termini costanti in unità di misura dedicate per snellire i calcoli.
+\begin{itemize}
+\item \textbf{Unità atomica di energia}: il blocco di costanti $\frac{\mu e^4}{\hbar^2}$ rappresenta l'unità atomica di energia (legata all'Hartree).
+\item \textbf{Energia di Rydberg ($Ry$)}: è definita come l'energia di legame dello stato fondamentale dell'idrogeno.
+\begin{equation}
+Ry = \frac{\mu e^4}{2 \hbar^2} \approx 13.6 \text{ eV}
+\end{equation}
+Pertanto, i livelli energetici si possono riscrivere nella forma compatta:
+\begin{equation}
+E_n = - Ry \frac{Z^2}{n^2}
+\end{equation}
+\end{itemize}
+
+\subsection{Numero d'Onda (Wavenumber)}
+
+In campo spettroscopico, l'energia delle transizioni viene spessissimo misurata non in Joule o eV, ma in \textbf{numeri d'onda} (wavenumbers), indicati convenzionalmente con la lettera $\sigma$ (o $\tilde{\nu}$).
+Il numero d'onda è definito come il reciproco della lunghezza d'onda ($\lambda$):
+\begin{equation}
+\sigma = \frac{1}{\lambda}
+\end{equation}
+Generalmente viene espresso in $\text{cm}^{-1}$. Questo valore è direttamente proporzionale all'energia della transizione fotonica ($E = hc\sigma$) ed è il parametro operativo standard nelle tavole spettroscopiche.
+
+\subsection{Potenziale di Ionizzazione}
+
+Prima di passare alla parte pratica, definiamo formalmente il \textbf{Potenziale di Ionizzazione} ($E_i$ o $IP$).
+L'energia di ionizzazione è l'energia necessaria per strappare l'elettrone dal suo stato fondamentale e portarlo a distanza infinita dal nucleo (dove l'energia potenziale è nulla).
+Matematicamente è la differenza tra l'energia a distanza infinita ($n = \infty$) e l'energia dello stato fondamentale ($n = 1$):
+\begin{equation}
+E_i = E_{\infty} - E_1 = 0 - \left( - Ry \frac{Z^2}{1^2} \right) = Ry \cdot Z^2
+\end{equation}
+Per l'atomo di idrogeno ($Z=1$), il potenziale di ionizzazione coincide esattamente con la costante di Rydberg ($13.6 \text{ eV}$).
+
+\section{Configurazione Elettronica e Nomenclatura Orbitale}
+
+A questo punto, avendo introdotto i numeri quantici, possediamo gli strumenti per tracciare la struttura dei livelli energetici, non solo dell'atomo idrogenoide, ma di tutti gli atomi multielettronici.
+
+La \textbf{Configurazione Elettronica} (Configuration of an electron) è definita univocamente dalla coppia di numeri quantici:
+\begin{equation}
+(n, l)
+\end{equation}
+Non c'è bisogno di specificare $m$ per definire il livello o il sottolivello energetico isolato (in assenza di campi magnetici esterni che rimuovano la degenerazione).
+
+Inoltre, è convenzione storica (derivante dalle prime osservazioni spettroscopiche) associare il numero quantico angolare $l$ non a un numero, ma a una specifica \textbf{lettera dell'alfabeto}, definendo così l'\textbf{orbitale}.
+La sequenza delle lettere in funzione del valore di $l$ è la seguente:
+\begin{itemize}
+\item $l = 0 \longrightarrow \textbf{s}$
+\item $l = 1 \longrightarrow \textbf{p}$
+\item $l = 2 \longrightarrow \textbf{d}$
+\item $l = 3 \longrightarrow \textbf{f}$
+\item $l = 4 \longrightarrow \textbf{g}$
+\item $l = 5 \longrightarrow \textbf{h}$
+\end{itemize}
+La sequenza prosegue in ordine alfabetico ($i, k, \ldots$ omettendo la $j$).
+Nella pratica astrofisica o chimica, difficilmente incontrerete ioni che occupano orbitali con $l$ molto alti allo stato fondamentale (tuttavia, in stati altamente eccitati tipici dei plasmi o nelle righe di ricombinazione, potrete osservare transizioni che coinvolgono orbitali $h$ o superiori).
+
+\section{Regole di Riempimento degli Orbitali e Nomenclatura Spettroscopica}
+
+Potrebbe sembrare un dettaglio accademico, ma è essenziale sapere che esistono orbitali (come gli orbitali $h$) che, sebbene non vengano popolati nello stato fondamentale (ground state), forniscono un contributo fondamentale nei modelli atomici complessi a cui gli elettroni possono accedere negli stati eccitati di un plasma reale.
+
+Definiamo operativamente un \textbf{orbitale}. Abbiamo detto che la configurazione di un elettrone è determinata dal numero quantico principale $n$ e da quello angolare $l$.
+Riprendiamo l'esempio più semplice:
+\begin{itemize}
+\item $n = 1$
+\item $l = 0$
+\end{itemize}
+La configurazione di questo orbitale si scriverà: \textbf{1s}.
+
+\subsection{Esempi Pratici di Configurazioni Elettroniche (Atomi Neutri)}
+
+Svolgiamo adesso alcuni semplici esercizi pratici per rinfrescare la memoria su come si costruiscono le configurazioni. Munitevi della vostra tavola periodica. Partiremo dagli atomi neutri.
+
+Ricordiamo due regole fondamentali:
+\begin{enumerate}
+\item Ogni orbitale (o meglio, ogni sottolivello definito da $l$) può ospitare un numero massimo di elettroni, dettato dal Principio di Esclusione di Pauli ($2(2l+1)$ elettroni).
+\begin{itemize}
+\item Sottolivello \textbf{s} ($l=0$): massimo \textbf{2} elettroni.
+\item Sottolivello \textbf{p} ($l=1$): massimo \textbf{6} elettroni.
+\item Sottolivello \textbf{d} ($l=2$): massimo \textbf{10} elettroni.
+\end{itemize}
+\item Il numero in apice (superscript) accanto alla lettera dell'orbitale indica il numero di elettroni in esso contenuti.
+\end{enumerate}
+
+Procediamo con l'elenco degli elementi:
+
+\begin{enumerate}
+\item \textbf{Idrogeno (H)}
+\begin{itemize}
+\item Numero atomico $Z = 1$ (1 protone, 1 elettrone).
+\item Configurazione: \textbf{$1s^1$}
+\end{itemize}
+
+```
+\item \textbf{Elio (He)}
+\begin{itemize}
+    \item Numero atomico $Z = 2$ (2 protoni, 2 elettroni).
+    \item Configurazione: \textbf{$1s^2$} (Il livello $n=1$ è ora completo).
+\end{itemize}
+
+\item \textbf{Litio (Li)}
+\begin{itemize}
+    \item Numero atomico $Z = 3$ (3 protoni, 3 elettroni).
+    \item Configurazione: \textbf{$1s^2 \, 2s^1$}
+\end{itemize}
+
+\item \textbf{Carbonio (C)} e \textbf{Ossigeno (O)} (Elementi cruciali in astrofisica)
+\begin{itemize}
+    \item Carbonio ($Z = 6$): \textbf{$1s^2 \, 2s^2 \, 2p^2$}
+    \item Ossigeno ($Z = 8$): \textbf{$1s^2 \, 2s^2 \, 2p^4$}
+\end{itemize}
+
+```
+
+\end{enumerate}
+
+\subsection{Digressione: Numero Atomico e Massa Atomica (Isotopi per la Fusione)}
+
+Facciamo una rapida parentesi terminologica. Il numero $Z$ rappresenta il \textbf{Numero Atomico} (Atomic number), ovvero il numero di protoni nel nucleo.
+Non va confuso con la \textbf{Massa Atomica} (Atomic mass), che è data dalla somma del numero di protoni e del numero di neutroni ($A = Z + N$).
+
+L'idrogeno standard (il cui nucleo è un singolo protone) ha zero neutroni. Ma esistono i suoi \textbf{isotopi}:
+\begin{itemize}
+\item \textbf{Deuterio} (Deuterium): possiede 1 protone e 1 neutrone.
+\item \textbf{Trizio} (Tritium): possiede 1 protone e 2 neutroni (ed è radioattivo).
+\end{itemize}
+Ho menzionato deuterio e trizio perché, nei plasmi di laboratorio per la fusione termonucleare controllata, non si utilizza l'idrogeno ordinario, bensì una miscela di deuterio e trizio, molto più efficiente per innescare le reazioni di fusione.
+
+\subsection{Eccezioni nell'Ordine di Riempimento: Il Ferro (Fe)}
+
+Tornando alle configurazioni, vediamo il \textbf{Ferro (Fe)}, che ha numero atomico \textbf{$Z = 26$}.
+Seguendo il Principio dell'Aufbau (costruzione progressiva), riempiamo gli orbitali secondo la scala delle energie crescenti:
+\begin{itemize}
+\item $1s^2 \quad 2s^2 \quad 2p^6 \quad 3s^2 \quad 3p^6$ (siamo arrivati a 18 elettroni, Argon).
+\item A questo punto, restano 8 elettroni da sistemare.
+\end{itemize}
+Dal punto di vista energetico rigoroso, l'orbitale $4s$ si riempie \textit{prima} dell'orbitale $3d$ perché possiede un'energia leggermente inferiore nello stato fondamentale neutro. Avremmo quindi: $4s^2 \, 3d^6$.
+
+Tuttavia, specialmente in \textbf{astrofisica e spettroscopia}, è prassi comune scrivere la configurazione mantenendo ordinati i livelli in base al numero quantico principale $n$, indipendentemente dall'energia. Quindi scriveremo:
+\begin{equation}
+1s^2 , 2s^2 , 2p^6 , 3s^2 , 3p^6 , 3d^6 , 4s^2
+\end{equation}
+Notate come l'orbitale $3d$, che può contenere fino a 10 elettroni, ne contenga solo 6, pur essendo seguito dal $4s$ completo. Entrambe le notazioni (ordine energetico o ordine per numero quantico principale) sono accettabili ai fini di questo corso, purché il conteggio e l'assegnazione elettronica siano esatti.
+Ciò che dovete assimilare è che l'ordine energetico dei livelli ($3d$ vs $4s$) \textbf{non è un dogma assoluto}, ma dipende criticamente dalla densità, dalla temperatura e dallo stato di ionizzazione del plasma (energy levels crossing).
+
+\section{Configurazioni Elettroniche degli Ioni Astrofisici}
+
+Come ribadito in precedenza, in astrofisica spaziale (ad eccezione delle nebulose fredde) quasi non esiste materia neutra. Si osserva esclusivamente plasma, ovvero materia ionizzata. Dobbiamo imparare a scrivere le configurazioni degli ioni.
+
+Consideriamo un caso estremo, molto osservato nei flare solari: il \textbf{Ferro Venti (Fe XX)}.
+Questo ione presenta intense righe di emissione a temperature elevatissime.
+\begin{itemize}
+\item Il simbolo \textbf{Fe XX} (notazione spettroscopica) indica il Ferro ionizzato 19 volte (carica \textbf{$+19$}).
+\item Il Ferro neutro ha 26 elettroni. Togliendone 19, ne restano \textbf{7}.
+\end{itemize}
+
+Ci troviamo di fronte a un nucleo di Ferro ($Z=26$) attorno al quale orbitano solamente 7 elettroni.
+Quale elemento neutro possiede 7 elettroni? L'\textbf{Azoto (N)}.
+Possiamo quindi affermare che il Fe XX appartiene alla \textbf{sequenza isoelettronica dell'Azoto} (Nitrogen-like ion).
+Il Fe XX si comporta spettroscopicamente in modo analogo all'Azoto neutro, pur non essendo affatto identico. La differenza risiede nel nucleo: il nucleo del Fe XX possiede 26 protoni, esercitando un potenziale coulombiano enormemente più intenso sui 7 elettroni rispetto ai 7 protoni del nucleo dell'Azoto. L'energia dei livelli sarà quindi molto diversa, ma la struttura della configurazione elettronica di valenza sarà equivalente.
+
+Scriviamo la configurazione per il Fe XX, sistemando i suoi 7 elettroni:
+\begin{equation}
+1s^2 , 2s^2 , 2p^3
+\end{equation}
+Questo semplice calcolo è la base per poter definire le righe spettrali che questo ione produrrà. Da questa configurazione di base derivano tutti i possibili termini spettrali (spectral terms) e multipletti che compongono lo spettro osservabile.
+
+\section{Risorse Essenziali: Il Database NIST}
+
+Per chiunque intenda analizzare dati spettroscopici reali, è indispensabile conoscere e saper interrogare i database atomici.
+Il database di riferimento globale per la spettroscopia è il \textbf{NIST Atomic Spectra Database} (National Institute of Standards and Technology).
+Vi invito a memorizzarne l'utilizzo o a salvarne il link. Raccoglie i dati di tutte le righe spettrali osservate e misurate in laboratorio, oltre ai modelli teorici per i livelli energetici atomici.
+
+\textit{(Nota a margine per il contesto attuale: La gestione dei grandi database atomici internazionali è complessa e dipendente dai finanziamenti pubblici statali. Storicamente questi server, inclusi il NIST e database associati come l'NRL, poggiavano sui fondi di università americane (es. Harvard) o istituzioni governative (es. NASA). I recenti drastici tagli ai budget per la ricerca hanno provocato ritardi negli aggiornamenti - ad esempio gli ultimi update visibili sul portale risalgono al 2024 - o trasferimenti fisici dei server tra vari istituti di ricerca mondiali. Fortunatamente, al momento il servizio resta operativo ed è il pilastro della nostra disciplina, lavorando in sinergia con altre immense librerie open-source sviluppate prevalentemente tra USA e UK, come il database astrofisico \textbf{CHIANTI}).}
+
+\subsection{Esempio di Interrogazione del Database NIST}
+
+Vi mostro rapidamente come estrarre i dati dal portale:
+\begin{enumerate}
+\item Dalla pagina principale, selezionate la sezione "Lines" (Righe Spettrali).
+\item Viene richiesta la specie ionica. Inserite lo ione di interesse \textbf{utilizzando la notazione spettroscopica}. Digitate, ad esempio: \texttt{Fe XX}.
+\item Selezionate il range di \textbf{lunghezze d'onda (wavelength)}. In ambito astrofisico EUV o ottico, la convenzione è utilizzare gli \textbf{\text{\AA}ngström (\text{\AA})} (in alternativa, nanometri o micrometri per l'infrarosso).
+\item Impostate i limiti inferiore e superiore del range d'indagine.
+\end{enumerate}
+Inviando la query (Retrieve Data), il sistema vi restituirà una tabella contenente tutte le transizioni note per quell'intervallo, specificando l'intensità relativa, le probabilità di transizione e le configurazioni esatte dei livelli superiore e inferiore tra i quali avviene il salto quantico. Questo è lo strumento diagnostico con cui dovrete inevitabilmente prendere dimestichezza.
+
+\section{Navigazione del Database NIST}
+
+Riprendiamo il discorso dal \textbf{NIST Atomic Spectra Database}. Una volta eseguita la query per un determinato ione (ad esempio Fe XX) nel range di lunghezze d'onda desiderato, il sistema restituisce una tabella strutturata in colonne.
+In questa fase ignoreremo momentaneamente alcune colonne per concentrarci su quelle fondamentali per la nostra analisi.
+
+Ecco le colonne chiave che dovete saper leggere:
+\begin{itemize}
+\item \textbf{Lunghezza d'onda (Wavelength, $\lambda$)}: Solitamente espressa in \text{\AA}ngström o nanometri, a seconda delle impostazioni scelte.
+\item \textbf{Livelli di Energia (Energy Levels)}: Questa colonna mostra le energie del livello inferiore (lower level) e del livello superiore (upper level) coinvolti nella transizione.
+\item \textbf{Configurazione (Configuration)}: Questa è la colonna cruciale per l'argomento trattato oggi. Vi mostra l'esatta configurazione elettronica dello stato. Ad esempio, potreste leggere $1s^2\, 2s^2\, 2p^3$ per lo stato fondamentale del Fe XX, oppure configurazioni eccitate in cui un elettrone è "saltato" in un livello superiore. (Nota: spesso nei database per ioni pesanti i "core" interni chiusi vengono omessi per brevità, focalizzandosi sugli elettroni di valenza).
+\item \textbf{Termine Spettrale (Term)} e \textbf{Momento Angolare Totale ($J$)}: Colonne che definiscono esattamente lo stato quantico, concetti che affronteremo nel dettaglio più avanti (es. tripletto, singoletto, stato fondamentale o eccitato).
+\end{itemize}
+
+Oltre alle righe spettrali (Lines), il NIST permette di interrogare direttamente i \textbf{Livelli Energetici (Levels)}.
+Tornando al menu principale, potete selezionare "Levels" e inserire il vostro ione. In questo form, potete personalizzare l'output:
+\begin{itemize}
+\item \textbf{Unità di Misura dell'Energia}: Potete scegliere tra Numeri d'onda ($\text{cm}^{-1}$), Elettronvolt ($\text{eV}$), Rydberg o frequenza. Per i plasmi ad alta energia, l'eV è spesso una scelta compatta e comoda.
+\item \textbf{Formato della Tabella}: È possibile ordinare i livelli per energia crescente, raggruppandoli in base alla configurazione e al termine spettrale.
+\end{itemize}
+
+È fondamentale familiarizzare con questo strumento, poiché le transizioni radiabili (emissione/assorbimento) obbediscono a precise \textbf{Regole di Selezione (Selection Rules)} quantistiche che determinano quali "salti" tra un livello superiore e uno inferiore siano consentiti o proibiti. Questo database condensa l'intera impalcatura teorica in dati direttamente fruibili. Se cercate su Google "\textit{NIST atomic database}", il primo risultato sarà quello corretto.
+
+\section{Esercitazione Pratica: Scrittura delle Configurazioni}
+
+Prima di chiudere, vi lascio tre semplici esercizi sulle configurazioni elettroniche, simili agli esempi svolti poco fa. L'obiettivo è fissare i concetti discussi oggi, in preparazione alla prossima lezione. Potete farli a casa (richiederanno non più di 15 minuti) o possiamo controllarli insieme la prossima volta.
+
+Scrivete la configurazione elettronica fondamentale e identificate la sequenza isoelettronica per i seguenti ioni:
+\begin{enumerate}
+\item \textbf{Mg X} (Magnesio ionizzato 9 volte). Dati: $Z_{\text{Mg}} = 12$.
+\item \textbf{Si XII} (Silicio ionizzato 11 volte). Dati: $Z_{\text{Si}} = 14$.
+\item \textbf{S XIV} (Zolfo ionizzato 13 volte). Dati: $Z_{\text{S}} = 16$.
+\end{enumerate}
+
+(Nota: fate molta attenzione al rapporto tra notazione spettroscopica e numero di elettroni persi, per calcolare quanti elettroni rimangono effettivamente sull'orbita).
+
+\subsection{L'Utilità degli Esercizi vs Intelligenza Artificiale}
+
+Siete ovviamente consapevoli che, se date in pasto questa richiesta a un'Intelligenza Artificiale, vi restituirà la soluzione esatta in una frazione di secondo. Ma lo scopo di questo esercizio non è ottenere passivamente il risultato; è \textit{allenare il ragionamento}. Sforzarsi di ricavare la configurazione manualmente, rilassandosi e applicando le regole dell'Aufbau, vi permetterà di interiorizzare la struttura atomica. L'AI non sosterrà l'esame al posto vostro né interpreterà per voi gli spettri anomali in laboratorio. Prendetevi questi 15 minuti di tranquillità per risolverli autonomamente.
+
+\section{Comunicazioni Logistiche e Prossime Lezioni}
+
+La nostra prossima lezione si terrà \textbf{Lunedì prossimo}. Come vi avevo anticipato a inizio corso, questo Giovedì sarò fuori sede, pertanto la lezione è annullata.
+
+Nel frattempo:
+\begin{itemize}
+\item Cercherò di riorganizzare i miei appunti manoscritti, al fine di condividerli con voi per fornirvi un supporto più strutturato rispetto al semplice file digitale grezzo.
+\item Se non dovessi riuscirci in tempo, vi condividerò comunque i file digitali delle lavagne (OneNote) e, in ogni caso, vi invito caldamente a \textbf{prendere i vostri appunti} durante le lezioni, integrandoli con le registrazioni audio/video che verranno messe a disposizione.
+\end{itemize}
+
+Ci sono domande su quanto trattato oggi?
+Se è tutto perfettamente chiaro, vi auguro buon fine settimana e vi do appuntamento a Lunedì.

@@ -1,0 +1,467 @@
+\chapter{Lezione 1 - 01/10/2026}
+
+\section{Introduzione al Corso e Presentazioni}
+
+Questa è la prima lezione del corso; procederemo con un'andatura moderata, senza sovraccaricare il programma di oggi. Inizieremo con le presentazioni reciproche e con l'introduzione alle tematiche che affronteremo.Il mio percorso accademico e lavorativo si è sviluppato per diciassette anni nel Regno Unito, dopo aver iniziato l'attività a Catania tra la fine del 2024 e il 2025. Nel corso della mia carriera ho tenuto diversi seminari, tra cui alcuni a Glasgow e Belfast, focalizzati sulle applicazioni della \textbf{spettroscopia} in differenti ambienti fisici. La mia area di competenza specifica riguarda la \textbf{fisica dei plasmi} e la \textbf{spettroscopia dei plasmi}, analizzando in dettaglio i livelli energetici atomici.In classe abbiamo una platea eterogenea. Come accaduto lo scorso anno, in cui avevamo studenti di diversa provenienza (ad esempio da New York) insieme a studenti di astrofisica e dottorandi, vi invito fin da ora a fermarmi e chiedere chiarimenti ogni qualvolta un concetto non vi risulti immediatamente comprensibile. Durante la lezione abbiamo avuto modo di ascoltare le presentazioni degli studenti, tra cui quella di Karthik, studente proveniente dall'India, il quale ha condiviso il suo interesse per la cosmologia a $21\text{ cm}$ e la \textbf{radiointerferometria}, motivando la sua scelta di studiare astrofisica con il desiderio di collaborare con il gruppo di ricerca locale.
+
+    \subsection{Note Logistiche}
+    
+    Prima di addentrarci nello studio dell'energia, è opportuno definire le pause durante le ore di corso: preferisco adottare pause brevi e riprendere rapidamente, ma lascio a voi la scelta organizzativa.Per quanto concerne la gestione delle aule, è emersa una sovrapposizione oraria (nella fascia 09:00 - 10:00) con la lezione della Professoressa Foumon. Troveremo una soluzione logistica flessibile, eventualmente cedendo il mio studio se si trattasse di una lezione a distanza o riorganizzando gli spazi per non interrompere la didattica.\section{La Missione Spaziale \textit{Solar Orbiter}}Attualmente il mio lavoro di ricerca è fortemente legato a una missione spaziale su larga scala denominata \textbf{Solar Orbiter}, lanciata nel febbraio del 2020.Questa missione è definita come una \textit{encounter mission} (missione di incontro), in quanto il suo obiettivo è coprire la distanza Terra-Sole e avvicinarsi in modo estremo alla nostra stella.\subsection{Strumentazione a Bordo}A bordo del satellite sono allocati 10 strumenti scientifici, suddivisi in due categorie principali:\begin{itemize}\item \textbf{4 Strumenti \textit{In Situ}}: il loro compito è raccogliere e analizzare campioni locali di particelle, come elettroni e varie specie ioniche.\item \textbf{6 Strumenti di \textit{Remote Sensing}} (Telerilevamento): consistono in un set di telescopi avanzati.\end{itemize}Si tratta della prima missione in cui un gruppo di telescopi viene portato a una distanza così ravvicinata dal Sole. Tale prossimità comporta enormi sfide ingegneristiche a causa delle elevatissime temperature ($T$) raggiunte. Per questo motivo, la sonda, che risulta molto massiccia, è dotata di una specifica tecnologia di protezione termica, ovvero un \textbf{heat shield} (scudo termico), progettato per proteggere l'elettronica di bordo e, in particolar modo, le delicate ottiche dei telescopi.
+    
+    \subsection{Profilo Orbitale e Osservazione Globale}
+    Una delle caratteristiche più spettacolari di \textit{Solar Orbiter} è il suo profilo orbitale. Sfruttando complesse manovre di fionda gravitazionale (gravity assist) con la Terra e con Venere, la sonda è in grado di uscire dal piano dell'eclittica. Attualmente, la sonda sta effettuando un'osservazione diretta dei \textbf{poli solari}. Questa rappresenta la migliore opportunità di osservazione polare del secolo in corso ed è di fondamentale importanza non solo per lo studio della fisica solare, ma anche per la comprensione delle stelle in generale e per le dinamiche che interessano la Terra. Grazie a strumenti specifici, tra cui spettrometri, \textit{full-disk imagers} e il coronografo \textbf{Metis} (dedicato all'osservazione esclusiva della corona solare), siamo in grado di ottenere una copertura completa della nostra stella: dalla superficie fino all'eliosfera e all'ambiente interplanetario. Questo ci collega a due macro-argomenti della fisica moderna:\begin{enumerate}\item La \textbf{Cosmologia}.\item Lo \textbf{Space Weather} (Meteorologia Spaziale): questo campo ha ricadute pratiche immediate, in quanto l'attività solare influenza criticamente i sistemi GPS, il controllo del traffico aereo e le reti di distribuzione dell'energia elettrica (power grids).\end{enumerate}
+    
+\section{Prerequisiti del Corso}
+Per affrontare al meglio questo corso di spettroscopia applicata, gli insegnamenti propedeutici più vicini ai nostri argomenti sono:\begin{itemize}\item \textbf{Struttura della Materia}.\item \textbf{Meccanica Quantistica}.\end{itemize}La conoscenza della meccanica quantistica è un requisito essenziale. Durante il corso utilizzeremo l'\textbf{equazione di Schrödinger} in tutte le sue possibili formulazioni. Mentre in Struttura della Materia avete probabilmente analizzato in prevalenza l'atomo a singolo elettrone, in questo corso studieremo le soluzioni per l'atomo a singolo elettrone, per l'atomo a due elettroni e affronteremo nel dettaglio i sistemi \textbf{multi-elettronici}.
+
+\section{Ambiti di Applicazione}
+Sebbene l'impostazione del corso sia orientata all'astrofisica, la metodologia e la spettroscopia che studieremo sono di validità assolutamente generale e trovano applicazione in innumerevoli ambienti ad alta tecnologia:\begin{itemize}\item \textbf{Fusione Nucleare}: esiste un legame inscindibile tra la fusione controllata in laboratorio e la fusione astrofisica (che avviene naturalmente nel Sole e nelle stelle). Vi è un continuo e proficuo scambio di conoscenze tra questi due settori.\item \textbf{Fisica dei Laser}: la diagnostica spettroscopica è fondamentale negli esperimenti sui laser ad alta potenza (ambiti in cui, ad esempio, i laboratori in Canada possiedono grande esperienza).\item \textbf{Diagnostica delle particelle}: applicabile all'analisi di elettroni, protoni e ioni pesanti.\item \textbf{Applicazioni mediche}.\end{itemize}
+
+\section{Obiettivi Pratici: La Diagnostica dei Plasmi}
+Il nostro corso si articolerà cercando di rispondere a nove domande o compiti fondamentali.Il primo quesito, che vi pongo immaginando che vi venga assegnato un task in veste di fisici, è il seguente: \textbf{Come misurereste la temperatura di un \textit{solar flare}?} Un \textit{solar flare} (brillamento solare) è una gigantesca e violenta esplosione che ha origine sulla superficie del Sole. Nel corso delle lezioni impareremo a ricavare le grandezze termodinamiche e cinematiche da questo tipo di eventi sfruttando i dati spettroscopici.
+
+\section{Brillamenti Solari e Impatto sull'Ambiente Terrestre}Il brillamento solare (solar flare) non si manifesta unicamente nell'atmosfera terrestre; possiamo osservarlo molto chiaramente dallo spazio nel range dell'ultravioletto (UV), specialmente visualizzando gli archi coronali tramite i nostri filtri. Questi eventi assumono una notevole rilevanza poiché emettono particelle cariche che viaggiano attraverso lo spazio interplanetario. Tali particelle possono raggiungere la Terra e interagire con il campo magnetico terrestre: questo fenomeno è all'origine delle aurore boreali, ma può causare notevoli problemi ai sistemi tecnologici terrestri (come reti elettriche, comunicazioni, eccetera). A questo punto si pone il problema diagnostico discusso in precedenza: \textbf{Come possiamo misurare la temperatura di un brillamento?} A prima vista potrebbe sembrare impossibile. Qualcuno potrebbe suggerire di inviare una sonda direttamente all'interno dell'evento; tuttavia, sebbene le sonde si avvicinino notevolmente (fino a distanze solari estreme), gli strumenti a bordo progettati per raccogliere campioni diretti (\textit{in situ}) si disintegrerebbero inevitabilmente a causa dell'intenso calore.
+
+    \subsection{Parallelo con i Reattori a Fusione Nucleare}
+    Avendo lavorato per due anni nel campo della fusione nucleare, vi propongo un parallelo. Immaginate di trovarvi in un impianto per la fusione termonucleare controllata: non è fisicamente possibile entrare nella camera del reattore, data l'estrema radioattività e l'altissimo rilascio di energia.L'ambiente è pesantemente schermato. Le operazioni sono condotte interamente da una \textit{control room} remota, tramite la quale i ricercatori "osservano" il plasma confinato all'interno del reattore impiegando sonde specifiche, telecamere e strumenti diagnostici avanzati. Questo processo di astrazione diagnostica è concettualmente identico a ciò che avviene in ambito astrofisico.\section{Il Ruolo Centrale della Radiazione}Torniamo all'astrofisica e rivolgiamo lo sguardo oltre il Sole. Come studiamo oggetti che si trovano nello spazio profondo? Esiste un unico mezzo a nostra disposizione per studiare l'intero Universo: \textbf{la luce} (o \textbf{radiazione elettromagnetica}). Questo è l'unico elemento tangibile che possediamo. Perfino nel caso del Sole, nonostante la possibilità di inviare sonde dotate di rilevatori \textit{in situ}, la quasi totalità delle informazioni essenziali ci giunge sotto forma di radiazione. A tal proposito, vi propongo una frase (seppur non strettamente rigorosa, risulta molto suggestiva):\textit{"Noi ascoltiamo la voce del plasma, la quale ci porta informazioni attraverso la luce."}Questa frase sottolinea un'esigenza imprescindibile: per poter interpretare questa "voce", è necessario disporre di uno strumento capace di decodificare l'informazione trasportata dalla radiazione. E qui risiede la peculiarità e la potenza della \textbf{spettroscopia dei plasmi}.
+    
+    \subsection{Cosa Misura la Spettroscopia?}
+    La spettroscopia dei plasmi è uno strumento di indagine estremamente potente. Attraverso lo studio della radiazione proveniente dallo spazio profondo (o da qualsiasi altra sorgente plasmatica), essa ci permette di determinare lo stato fisico e chimico della sorgente stessa. Nello specifico, analizzando la radiazione, è possibile misurare:\begin{itemize}\item La \textbf{temperatura} ($T$).\item La \textbf{densità} ($\rho$ o $n$).\item Lo stato termodinamico (verificando se il sistema è all'equilibrio o in uno stato dinamico).\item Il \textbf{campo magnetico} ($B$).\item La \textbf{rotazione} e i moti interni della sorgente.\item La \textbf{composizione chimica}.\end{itemize}L'analisi spettroscopica funge da vera e propria "impronta digitale" (footprint) della sorgente osservata.
+    
+\section{Struttura del Corso e Modelli Fisici}
+Passiamo agli obiettivi formali del corso, che definiscono le finalità che andremo a perseguire e le modalità con cui lo faremo. Questi obiettivi sono strettamente legati al programma (syllabus), che è stato in parte riadattato. In origine, esso era orientato all'ambito stellare; tuttavia, l'impostazione attuale è più generalista, in modo da poter essere applicata a tutti i contesti plasmatici dell'Universo, mantenendo al contempo il nucleo fondamentale intatto (come riscontrabile confrontando i programmi degli anni precedenti).
+
+    \subsection{Modellistica e Interpretazione della Radiazione}
+    Il primo obiettivo è fornire ai futuri fisici gli strumenti matematici e fisici necessari per decodificare la radiazione emessa dai plasmi. Per raggiungere questo scopo, dobbiamo costruire dei \textbf{modelli fisici} dell'ambiente studiato per descrivere e riprodurre l'emissione radiativa attesa. Questo passaggio è critico perché ciò che osserviamo dallo spazio raramente proviene da una singola sorgente isolata. Pongo una domanda: quando osserviamo dalla Terra una stella distante, stiamo ricevendo esclusivamente la luce emessa da quella stella? La risposta è \textbf{no}. Noi rileviamo simultaneamente tutto ciò che si interpone lungo la nostra \textbf{linea di vista} (line of sight). Vediamo la luce della stella sommata e alterata dalle emissioni, e dagli assorbimenti, della materia interposta. Questo implica che, dopo aver definito il quadro matematico e fisico del modello, dobbiamo comprendere in che modo i processi di \textbf{fisica atomica} generino la radiazione (attraverso atomi, ioni e molecole) lungo tutto il tragitto.
+    
+    \subsection{Dal Modello alle Osservazioni}
+    Una volta elaborati i modelli, la fase successiva è il confronto con i dati osservativi per convalidare il modello. Tuttavia, questa procedura si rivela complessa: descrivere con precisione un atomo, persino per casi semplici (si pensi alla complessità crescente passando dall'atomo a un elettrone ai sistemi multi-elettronici studiati in Struttura della Materia), è un'impresa ardua. In base al settore di ricerca, l'approccio modellistico può variare:\begin{itemize}\item \textbf{In cosmologia e astrofisica stellare:} l'approccio convenzionale è di tipo deduttivo, partendo dallo sviluppo dei modelli per cercare di ricavare le osservazioni attese.\item \textbf{In fisica solare:} spesso si segue il percorso inverso (metodo fenomenologico). Si parte dall'osservazione, si costruisce un modello di base, e poi lo si raffina progressivamente per adattarlo ai dati, chiedendosi ad ogni iterazione: "\textit{Cosa dobbiamo variare per riprodurre ciò che osserviamo?}"\end{itemize}
+    
+\section{Richiami di Fisica dei Plasmi}
+Prima di addentrarci nei dettagli, è utile richiamare cosa sia effettivamente un plasma. Come è noto, esso viene definito come il \textbf{quarto stato della materia} e spesso assimilato grossolanamente a un \textit{gas caldo}. Questa definizione semplificata è utile quando si imposta un modello fluidodinamico, ma non è fisicamente accurata.Un plasma si distingue da un gas neutro per le seguenti caratteristiche:\begin{itemize}\item È uno stato \textbf{macroscopicamente neutro}.\item Tuttavia, al contrario di un gas ordinario, \textbf{non è composto esclusivamente da particelle neutre}. Un plasma è un fluido composto da ioni (ovvero atomi privati di uno o più elettroni), elettroni liberi, ed eventualmente protoni, mescolati a un residuo di particelle neutre.\end{itemize}La peculiarità fondamentale del plasma è proprio la presenza generalizzata di particelle dotate di carica elettrica, che lo rende uno stato della materia impossibile da mantenere in condizioni ambientali standard sulla Terra (un ambiente saturo di cariche libere ci sarebbe fatale). I plasmi esistono in condizioni isolate sulla Terra (come ad esempio nei gas luminescenti all'interno dei tubi fluorescenti per l'illuminazione, dove la scarica è indotta dall'applicazione di una differenza di potenziale). In tali ambienti, sebbene la somma totale delle cariche positive e negative sia macroscopicamente bilanciata, le particelle cariche si muovono liberamente all'interno del volume senza subire un processo immediato e completo di ricombinazione atomica.
+
+\section{Il Plasma: Il Quarto Stato della Materia}
+
+Per questo motivo il plasma è definito il \textbf{quarto stato della materia}. È uno stato che raramente osserviamo nel nostro ambiente quotidiano sulla Terra e che, per noi, può apparire inusuale. Tuttavia, è lo stato predominante se guardiamo al di fuori del nostro pianeta:
+
+\begin{itemize}
+    \item Costituisce il Sole e tutte le stelle.
+    \item È presente in grandissima parte nello spazio profondo.
+    \item Risulta ovviamente l'ambiente fondamentale negli esperimenti sulla \textbf{fusione nucleare}.
+\end{itemize}
+
+Proprio riguardo alla fusione, sappiamo che il nostro obiettivo ultimo (il "Santo Graal" della ricerca energetica) è quello di riuscire a costruire un reattore a fusione commerciale efficiente, tecnologia della quale al momento ancora non disponiamo. Per realizzarlo, lo studio e la gestione dei plasmi sono requisiti imprescindibili.
+
+    \subsection{Comportamento Elettromagnetico Collettivo}
+    
+    In secondo luogo, vi è un aspetto critico su cui credo abbiate già discusso nei corsi di base: le particelle cariche all'interno di un plasma esibiscono un comportamento collettivo.
+    Qual è la principale peculiarità di questo stato? Dal momento che il plasma è costituito da particelle cariche, esso \textbf{interagisce in modo diretto ed estremamente sensibile con i campi elettrici e magnetici}.
+    
+    Se si applica un campo elettromagnetico a un solido o a un liquido ordinario, l'interazione diretta risulta trascurabile o assente, a meno di condizioni molto specifiche. Per il plasma, al contrario, questa interazione è costante e fondamentale, proprio a causa della presenza delle cariche libere.
+    
+    Il plasma non reagisce come un insieme di particelle singole e indipendenti, ma risponde ai campi (ad esempio un campo di radiazione) attraverso un \textbf{comportamento collettivo} dell'intero fluido.
+    \textbf{Esempio pratico:} Consideriamo una protostella (una stella in via di formazione). Il nucleo interno produce radiazione che deve attraversare le nubi di materia circostanti. Se queste nubi sono costituite da plasma (dunque da particelle cariche), la radiazione originaria interagirà collettivamente con la nube, venendo alterata. Ciò che rileveremo sarà una radiazione differente, frutto dell'interazione tra l'emissione protostellare e il plasma interposto.
+    
+    \subsection{La Quasi-Neutralità}
+    
+    Come accennato in precedenza, è corretto affermare che il plasma contenga cariche elettriche, ma è altrettanto vero che la carica netta globale del volume è neutra.
+    Nella realtà sperimentale, la carica netta non è mai rigorosamente e matematicamente identica a zero. Come avrete notato nei laboratori didattici (ad esempio in Laboratorio 1 o 2), i risultati degli esperimenti raramente combaciano in modo esatto con le previsioni teoriche. In questi contesti subentrano le \textbf{approssimazioni}. Se un'approssimazione è fisicamente ragionevole e ci permette di descrivere adeguatamente il fenomeno di interesse, allora risulta valida.
+    Per il plasma vale proprio questo principio: la carica netta è approssimabile a zero. Questa condizione prende il nome di \textbf{quasi-neutralità} (quasi-neutrality) ed è uno dei concetti cardine che affronteremo oggi.
+    
+\section{Programma del Corso e Metodologia (Syllabus)}
+
+Passiamo ora a descrivere \textit{come} intendiamo raggiungere i nostri obiettivi didattici. Vi mostrerò come i vari argomenti si integrano nel syllabus del corso. Pur partendo da punti di vista differenti, l'obiettivo è uniformare le conoscenze e permettervi di identificare i processi fondamentali. (Il programma è consultabile anche online).
+
+Il percorso si struttura affrontando le seguenti questioni:
+\begin{enumerate}
+    \item Come studiare l'emissione di radiazione.
+    \item Identificare l'innumerevole quantità di processi atomici operanti nel plasma.
+    \item Analizzare la fluidodinamica per capire se il plasma sia in equilibrio o meno.
+    \item Costruire dei modelli (anche molto sofisticati) per rispondere alla domanda: "Come si comporta il plasma sotto condizioni fisiche differenti?".
+\end{enumerate}
+
+I \textbf{Punti 1, 2 e 3 del Syllabus} vertono sulla \textbf{costruzione del modello atomico e molecolare}.
+Dobbiamo partire dalle fondamenta: l'atomo e la molecola. Ho deciso di inserire alcune nozioni sulle molecole poiché risultano di particolare interesse per chi tra voi è appassionato di cosmologia. Nello spazio profondo (deep space) le temperature crollano drasticamente. In questi ambienti freddi diviene possibile la formazione di molecole; pertanto, forniremo perlomeno i concetti di base della spettroscopia molecolare.
+
+    \subsection{Fisica Atomica e Quantistica per il Corso}
+    
+    Per descrivere l'atomo, abbiamo necessità di impiegare la meccanica quantistica. Studieremo:
+    \begin{itemize}
+        \item I \textbf{livelli energetici} ($E$).
+        \item Le \textbf{funzioni d'onda} ($\psi$).
+        \item L'equazione di Schrödinger.
+        \item Lo \textbf{spin}.
+        \item I \textbf{meccanismi di accoppiamento} (Coupling).
+    \end{itemize}
+    
+    I meccanismi di accoppiamento (un incrocio tra chimica strutturale e fisica) ci permettono di combinare i momenti angolari degli orbitali per risolvere il modello atomico. Discuteremo l'\textbf{accoppiamento di Russell-Saunders (LS coupling)}, l'\textbf{interazione spin-orbita} e, seppur marginalmente, l'\textbf{accoppiamento $jj$}.
+    Questo studio sarà inizialmente applicato all'atomo idrogenoide (a singolo elettrone). Dal momento che mi avete confermato di aver già trattato approfonditamente il sistema a singolo elettrone nel corso precedente, dedicherò a questo argomento una rapida revisione, procedendo speditamente per potermi concentrare sui \textbf{sistemi multi-elettronici}. Successivamente, estenderemo questi principi partendo dal limite termodinamico di approssimazione.
+    
+    Questi primi tre punti del programma definiscono le \textbf{quantità fondamentali} necessarie per i modelli successivi.
+    
+    \subsection{Dinamica delle Popolazioni e Trasporto Radiativo}
+    
+    Il punto successivo riguarda la \textbf{dinamica delle popolazioni dei livelli energetici}. Una volta definiti i tassi (rates) di tutte le reazioni possibili, elaboreremo un modello che descriva come le particelle si distribuiscano tra i vari stati energetici in base alle caratteristiche macroscopiche (es. plasma freddo o caldo, plasma \textit{thin} - otticamente sottile - o \textit{thick} - otticamente spesso).
+    
+    Il \textbf{Punto 8 del Syllabus}, probabilmente il più affascinante, riguarda l'\textbf{Equazione del Trasporto Radiativo} (Radiative Transfer Equation). Questo argomento riveste un'importanza capitale perché ci permette di calcolare esattamente come si propaga la radiazione dall'interno del plasma fino all'osservatore. L'equazione del trasporto è uno strumento flessibile all'interno del quale è possibile inserire svariati modelli di plasma per poi risolverla analiticamente o numericamente.
+    Tutto questo percorso concettuale converge verso l'obiettivo primario: \textbf{comprendere il significato di una riga spettrale (spectral line)}. Vogliamo poter osservare una riga di emissione, studiarne la larghezza o l'intensità e usarla come una "finestra" per ricavare informazioni sulla sorgente.
+
+\section{Modellazione Avanzata e Calcolo Computazionale}
+
+Il secondo obiettivo generale del corso (che copre i \textbf{Punti 4 e 5 del Syllabus}) è stabilire la connessione operativa tra il modello teorico e le quantità osservabili.
+I modelli risultano spesso formidabilmente complessi. Abbiamo bisogno di definire quantità fisiche sintetiche che ci permettano, da un lato, di semplificare il modello ai fini della comprensione fisica e, dall'altro, di renderlo computazionalmente trattabile.
+
+Vi garantisco che i calcoli richiesti in questo settore non si possono eseguire a mano; si demanda tutto all'impiego di software eseguiti da specialisti, vista l'enorme quantità di parametri in gioco.
+
+    \subsection{Esempio Pratico: Calcolo delle Sezioni d'Urto}
+    
+    Porto come esempio la mia esperienza personale. Mi sono occupato del calcolo di enormi banche dati di \textbf{sezioni d'urto} ($\sigma$) per i processi di eccitazione per impatto elettronico (electron impact excitation). Immaginate un elettrone che urta uno ione causandone l'eccitazione a un livello superiore: la probabilità che questo accada è definita da una specifica sezione d'urto.
+    
+    Questo calcolo deve essere reiterato per:
+    \begin{itemize}
+        \item Ogni elemento della tavola periodica.
+        \item Ogni possibile stato di ionizzazione di quell'elemento.
+    \end{itemize}
+    
+    Lavoravo nello specifico su \textbf{elementi pesanti} (heavy elements), dal ferro in su. Il carico computazionale era tale da richiedere l'uso massiccio di architetture di calcolo parallelo (parallel computing). Il codice veniva parallelizzato per far lavorare numerosi calcolatori in sinergia. Spesso occorreva un'intera settimana di elaborazione ininterrotta soltanto per generare un singolo file di dati valido. Un minimo errore significava dover ricominciare la settimana di calcolo da capo. Questo per darvi l'idea di come il calcolo spettroscopico quantistico richieda un massiccio dispendio di risorse macchina (time machine).
+    
+    \subsection{Nota Astrofisica: La Nucleosintesi del Ferro}
+    
+    Vi pongo un'altra questione astrofisica legata a questi elementi pesanti: nel contesto della fisica solare o spaziale, qual è l'elemento più pesante di cui riusciamo comunemente a osservare lo spettro?
+    Anche se potremmo individuarne altri in tracce, l'elemento principe in queste osservazioni diagnostiche è il \textbf{Ferro} (Fe). L'atomo di ferro (numero atomico $Z=26$) costituisce un "collo di bottiglia" evolutivo per le stelle.
+    
+    Come avrete studiato nel modulo di evoluzione stellare, all'interno delle stelle di grande massa (\textit{high-mass stars}), le reazioni di fusione termonucleare (nucleosintesi stellare) procedono creando elementi via via più pesanti nei vari \textit{shells} (strati) del nucleo. Questa catena di reazioni esotermiche, però, si arresta inesorabilmente alla sintesi del \textbf{Ferro}.
+    Le reazioni per fondere elementi più pesanti del ferro risultano infatti endotermiche (richiedono energia invece di produrne). Di conseguenza, il ferro si accumula al centro ed è considerato l'elemento stabile più pesante che possiamo osservare diffusamente nelle atmosfere stellari ordinarie per fare diagnostica su larga scala.
+    
+    Attraverso i \textbf{Punti 4 e 5}, dunque, andremo a quantificare i coefficienti di reazione (rate coefficients) e le probabilità di transizione necessarie per gestire analiticamente e computazionalmente questo tipo di ambienti chimico-fisici.
+
+\section{Quantificazione dei Coefficienti Spettroscopici}
+
+Esamineremo ora la forza dell'oscillatore (oscillator strength). Probabilmente ne siete già a conoscenza: essa rappresenta l'oscillazione dell'atomo accoppiata all'intensità della transizione (transition strength). Vedremo i multipletti (multiplets), le sezioni d'urto (cross-sections), e le velocità di collisione (collision rates). Studieremo l'eccitazione (excitation), la diseccitazione (de-excitation), la ionizzazione (ionization) e la ricombinazione (recombination).
+
+Se avremo tempo sufficiente, affronteremo un altro processo estremamente importante: la \textbf{fotoionizzazione} (photoionization) e lo \textbf{scambio di carica} (charge exchange).
+
+Perché ho inserito esplicitamente lo scambio di carica? Solitamente non si osserva molto scambio di carica come transizione dominante; tuttavia, in quali specifici ambienti spaziali vi aspettereste di osservare questo processo?
+Per "scambio di carica" intendiamo un processo in cui due atomi o ioni collidono e si scambiano la carica (ad esempio uno ione cede un elettrone a una specie neutra o ad un altro ione). Esiste un caso emblematico. Ovviamente il processo avviene ovunque, dalle stelle alle galassie al mezzo interstellare (interstellar medium), inclusi i mezzi nebulari (nebulae). Ma c'è un oggetto particolare del nostro Sistema Solare in cui lo scambio di carica è stato osservato chiaramente e risulta fondamentale: le \textbf{comete} (comets). L'osservazione dello spettro delle comete è dominata dalle firme di questo fenomeno. Pertanto, qualora qualcuno di voi fosse interessato alla fisica dei corpi minori, troverà utile questo concetto.
+
+\section{Il Profilo di Riga (Line Profile)}
+
+Un altro argomento che abbiamo precedentemente accennato ma di cui parleremo nel dettaglio è il \textbf{profilo di riga} (line profile), trattato al punto 7 del programma.
+
+Quando osserviamo uno spettro, cos'è materialmente un suo grafico?
+Ricordo che ai tempi dell'università i docenti ripetevano costantemente questa definizione: \textit{Uno spettro è l'intensità in funzione della frequenza o della lunghezza d'onda}.
+Questo è il concetto basilare. Avremo quindi:
+
+\begin{equation}
+I(\lambda) \quad \text{oppure} \quad I(\nu)
+\end{equation}
+
+dove $I$ è l'intensità (intensity) e la variabile indipendente può essere la lunghezza d'onda ($\lambda$, misurata ad esempio in \text{\AA}ngström $\text{\AA}$), o la frequenza ($\nu$ o talvolta indicata con $f$). Le due rappresentazioni sono ovviamente interscambiabili procedendo in direzioni opposte, dato che $\lambda \propto 1/\nu$.
+
+Supponiamo di tracciare un grafico di $I(\lambda)$. Idealmente, se la radiazione proviene da una transizione quantistica tra due livelli energetici discreti dell'atomo, la riga dovrebbe apparire come un impulso infinitesimo (una funzione a delta di Dirac): un singolo picco verticale strettissimo.
+Nella realtà osservativa, invece, le righe si presentano con una forma allargata, detta \textbf{profilo}. Questo profilo può essere descritto matematicamente, ad esempio, tramite una Gaussiana, una Lorentziana o una funzione di Voigt (Voigt profile), e può presentarsi più stretto o più largo a seconda delle condizioni fisiche.
+
+\subsection{Cosa Determina il Profilo di Riga?}
+
+Il profilo di riga è cruciale perché veicola una ricchezza di informazioni superiore alla mera intensità:
+\begin{enumerate}
+    \item \textbf{Caratteristiche Strumentali}: In prima istanza, il profilo è limitato dalla risoluzione dell'hardware (instrumental profile). Nessuno strumento è perfetto; la risoluzione spettrale ci indica con quanta precisione lo strumento riesce a separare lunghezze d'onda vicine.
+    \item \textbf{Dinamica e Termodinamica del Plasma}: Una volta noto il profilo strumentale, possiamo sottrarlo (tecnicamente, operare una \textit{deconvoluzione}) per ottenere il profilo intrinseco della riga emessa dall'oggetto. Questo profilo intrinseco ci svela la cinetica del plasma emittente:
+    \begin{itemize}
+        \item Moti macroscopici e turbolenza.
+        \item Temperatura (tramite l'allargamento Doppler termico).
+        \item Pressione.
+        \item Presenza di campi elettromagnetici. Ad esempio, il campo magnetico induce un \textbf{effetto Zeeman} (Zeeman splitting), che suddivide la riga in più componenti o ne modifica drasticamente il profilo complessivo.
+    \end{itemize}
+\end{enumerate}
+
+Come intuibile, la presenza stessa di una specifica riga ci informa su \textit{quali} elementi chimici costituiscono il plasma; tuttavia, studiarne la forza e l'allargamento ci permette di fare un'analisi fisica completa dell'ambiente.
+
+\section{Applicazioni Diagnostiche e Strumenti Quantitativi}
+
+L'ultima parte del corso (il Punto 9 del Syllabus) è dedicata alle \textbf{applicazioni pratiche}. Questa è la sezione che risulterà più utile nella vostra futura carriera (tesi di laurea magistrale, dottorato o lavoro in astrofisica): acquisire dati, ottimizzarli e comprenderne il significato fisico.
+
+Costruito il modello teorico e ottenute le osservazioni, uniamo i due mondi estraendo i parametri diagnostici. Ci concentreremo solo su alcune tecniche fondamentali. Due esempi principali sono la derivazione della densità elettronica ($N_e$) e della temperatura ($T$) sfruttando il \textbf{rapporto di intensità di righe spettrali} (line ratio).
+
+    \subsection{Diagnostica di Densità: Il Caso dell'Ossigeno V (OV)}
+    
+    Prendiamo ad esempio un'analisi condotta con lo spettrometro \textbf{SPICE} a bordo di Solar Orbiter. Uno degli ioni osservati è l'\textbf{Ossigeno V} (OV, ovvero ossigeno ionizzato 4 volte, secondo la notazione spettroscopica). Dedicherò a questo ione una discussione più tecnica nelle prossime lezioni.
+    Nello spettro dell'OV si osserva un \textbf{multipletto} composto da varie righe. Tra queste, vi sono due righe specifiche il cui rapporto di intensità è \textit{insensibile} alle variazioni di temperatura, ma risulta \textbf{fortemente dipendente dalle variazioni di densità} del plasma emittente.
+    
+    Misurando l'intensità di queste due righe (integrando l'area sottesa dal loro profilo di riga) e calcolandone il rapporto $R$, possiamo ricavare la densità.
+    Dal lato teorico, si risolvono i modelli per un ampio range di densità per produrre una curva teorica.
+    
+    Se poniamo su un grafico:
+    \begin{itemize}
+        \item L'asse delle ascisse (x): la \textbf{densità elettronica} $N_e$ (espressa in $\text{cm}^{-3}$).
+        \item L'asse delle ordinate (y): il \textbf{rapporto di intensità} $R = I_1 / I_2$.
+    \end{itemize}
+    Otterremo una curva $R(N_e)$. Posizionando il valore numerico del rapporto misurato $R_{\text{obs}}$ su questa curva (calcolando il relativo errore statistico e propagando l'incertezza), possiamo estrapolare il corrispondente valore della densità elettronica del plasma target.
+    
+    Questa procedura, per quanto schematizzata, costituisce uno strumento d'indagine inestimabile. La medesima logica si applica per determinare la temperatura, selezionando accuratamente righe il cui rapporto sia sensibile a $T$ ma indipendente da $N_e$. Studieremo i principi di fisica atomica che giustificano il diverso comportamento di queste righe.
+    
+    \subsection{Abbondanze Chimiche e Space Weather}
+    
+    Un ulteriore passo applicativo (se il tempo lo consentirà) sarà il calcolo delle \textbf{abbondanze chimiche} (chemical abundances). L'analisi delle abbondanze è complessa, ma nel nostro gruppo di ricerca solare è praticata ampiamente poiché rappresenta l'unica traccia affidabile per collegare le misure di telerilevamento (spettroscopiche) con le rilevazioni degli strumenti \textit{in situ}.
+    Se, ad esempio, osserviamo un'espulsione di materia (CME, Coronal Mass Ejection) e ne determiniamo l'abbondanza isotopica o elementare in remoto, e riusciamo in seguito a misurare lo stesso pattern di abbondanze tramite gli strumenti a bordo del satellite quando il plasma lo investe, possiamo accertare senza dubbio la provenienza di quel plasma. Questo ci permette di prevedere le dinamiche del plasma interplanetario con diversi giorni di anticipo rispetto all'impatto con la magnetosfera terrestre, fornendo un servizio di \textit{forecast} vitale per lo Space Weather (per la salvaguardia di GPS, reti elettriche e controlli aerei).
+    
+\section{Informazioni sull'Esame}
+
+Infine, vorrei darvi alcune note operative in merito al materiale e all'esame.
+Ho notato la presenza di un bug nel sistema online del Syllabus: selezionando la lingua inglese, la pagina rimanda all'inizio e non carica correttamente la visualizzazione estesa del programma. Suppongo sia un problema in fase di risoluzione da parte dell'Ateneo. Ad ogni modo, il testo completo è visualizzabile, quindi potrete sempre usarlo come riferimento e farmi domande.
+
+Riguardo alla modalità di \textbf{valutazione finale} (assessment), ci ho riflettuto ieri e sto ancora definendo i dettagli ottimali. Il docente precedente impostava l'esame unicamente sotto forma di prova orale (oral exam) di un'ora, proponendo tre domande principali e due domande secondarie. Personalmente, ritengo che questa formula non sia quella più efficace, per cui adotterò una metodologia di verifica differente che vi comunicherò a breve.
+
+\section{Modalità di Esame e Strutturazione del Corso}
+
+Avendo delineato la complessità concettuale della materia, ritengo fondamentale ricalibrare la modalità di verifica finale (assessment). Poiché questo corso ha un impianto teorico marcato – seppur propedeutico alla diagnostica applicata – comprendo che lo studio sistematico dell'intera mole di argomenti risulterebbe eccessivamente gravoso se confinato in un'unica prova finale intensiva.
+
+L'impostazione precedente, basata esclusivamente sull'esame orale in una singola seduta, non mi sembra la soluzione didattica ottimale. La mia proposta è la seguente:
+\begin{enumerate}
+    \item \textbf{Esame Orale Finale Alleggerito}: L'esame finale si svolgerà regolarmente sotto forma di colloquio orale (al cui interno inserirò le consuete tre domande principali). Tuttavia, esso non verterà sull'intero programma, ma si concentrerà sui moduli finali (interpretazione dei profili di riga e diagnostica), che richiedono un approccio più maturo e discorsivo.
+    \item \textbf{Prove Intermedie (In itinere)}: Durante il semestre introdurrò dei brevi \textit{test in itinere}. Queste prove saranno di taglio pratico e si baseranno sulla risoluzione di esercizi (ad esempio: determinare il termine spettrale, calcolare l'accoppiamento per un determinato livello energetico, etc.).
+\end{enumerate}
+
+Ritengo che questi calcoli, fondamentali per assimilare i fondamenti di fisica strutturale e quantistica del corso, siano molto più facili (e appaganti) da risolvere su carta con tempi adeguati, piuttosto che essere esposti verbalmente durante un'interrogazione frontale con il professore. Affrontando e superando questi brevi compiti, la relativa parte di programma (le prime sezioni del Syllabus) non sarà più oggetto di verifica all'esame finale.
+
+So bene quanto la preparazione di esami vasti come Fisica Matematica o Meccanica Quantistica possa richiedere interi semestri di studio (ricordo ancora il mio esame scritto di Fisica Matematica durato quattro ore per quattro complessi esercizi). Adottando questa suddivisione, spero di aiutarvi ad assimilare il materiale progressivamente e presentarvi pronti per gli appelli della sessione estiva (Luglio).
+Questa è la mia intenzione didattica. Vi invito comunque a fornirmi dei \textit{feedback} (anche nelle prossime lezioni); se riterrete questo metodo poco funzionale, sono pienamente disponibile a rivalutare la struttura dell'esame in base alle vostre esigenze.
+
+\section{Applicazioni Reali della Spettroscopia: Oltre l'Aula}
+
+Per concludere questa lezione introduttiva, desidero mostrarvi le reali potenzialità di ciò che stiamo per studiare, affinché abbiate chiaro che l'apparato teorico non è fine a se stesso, ma rappresenta uno strumento essenziale per la fisica e l'industria ad alta tecnologia.
+
+A tal fine vi presenterò i concetti cardine estratti da un mio seminario accademico intitolato: "\textit{Dall'Astrofisica ai Reattori Tokamak: Applicazioni di Diagnostica dei Plasmi}".
+Non pretendo che ne afferriate immediatamente tutti i dettagli tecnici – i modelli presentati sono molto complessi – ma vi prego di concentrarvi sul filo conduttore: \textbf{la trasversalità della tecnica}. Le metodologie spettroscopiche nate per decifrare l'Universo sono le medesime impiegate oggi per il controllo della fusione nucleare sulla Terra.
+
+In questo seminario sono evidenziati i contributi del \textbf{Prof. Hugh Summers} (mio supervisore di dottorato in Scozia e mente brillante nel campo) e di \textbf{G. Doyle}, esperto operativo ad Armagh (in Irlanda del Nord) nel campo della diagnostica. Le metodologie che vedremo sono state ampiamente utilizzate al \textbf{JET} (Joint European Torus), il più grande esperimento di fusione europeo situato a Culham, nel Regno Unito, ora prossimo alla chiusura per fare spazio alla nuova generazione. L'erede del JET è \textbf{ITER}, un gigantesco reattore sperimentale attualmente in costruzione nel sud della Francia (vicino a Marsiglia). ITER rappresenta il passaggio cruciale verso lo sviluppo dei futuri reattori a fusione industriali (i "reattori DEMO"), che forse vedranno la luce verso la fine delle nostre carriere.
+
+    \subsection{Vantaggi della Diagnostica Radiativa}
+    
+    Sia in ambito astrofisico che in laboratorio, il concetto fondante è lo stesso: ricavare i parametri fisici e meccanici dal \textbf{profilo di emissione (o di assorbimento)} della radiazione. (Come noto, così come esistono spettri di emissione, esistono spettri di assorbimento, i quali seguono le medesime logiche fisiche).
+    
+    Perché la spettroscopia radiativa è il metodo diagnostico d'elezione per i plasmi?
+    Perché è un metodo d'indagine \textbf{non invasivo}.
+    Quando introducete sonde fisiche (come le sonde di Langmuir) all'interno di un plasma di laboratorio per misurarne il potenziale, andate inevitabilmente a perturbare il plasma stesso, modificando l'equilibrio elettromagnetico locale (come sancito dal principio cardine della misurazione discusso in Fisica Sperimentale). Inoltre, le sonde restituiscono misurazioni puramente locali (puntiformi), richiedendo array di sonde per mappare un volume, cosa spesso impossibile in reattori ad altissima temperatura.
+    L'osservazione spettroscopica passiva (telerilevamento o \textit{remote sensing}) elimina del tutto il problema della perturbazione e permette di analizzare volumi estesi.
+    
+    \subsection{Dall'Astrofisica al Laboratorio: Il Sole nell'Ultravioletto Estremo (EUV)}
+    
+    Iniziamo dall'oggetto astrofisico per eccellenza: il \textbf{Sole}.
+    L'immagine standard che abbiamo del Sole (nel visibile) è quella di un disco giallo e quieto. Tuttavia, se osserviamo il Sole attraverso filtri spaziali operanti nell'\textbf{Ultravioletto Estremo (EUV)}, l'aspetto cambia radicalmente.
+    Osservando le immagini registrate nel range EUV, non vediamo più una superficie uniforme, ma una caotica, dinamica e violenta struttura tridimensionale, dominata da \textbf{archi coronali} e protuberanze.
+    Tutta questa dinamica, che nel visibile risulta quasi del tutto nascosta, è governata dai \textbf{campi magnetici} solari.
+    
+    Questa complessa interazione tra plasma e campi magnetici – origine dei brillamenti e dell'emissione radiativa ad alta energia – sarà l'oggetto del vostro prossimo corso di Fisica Solare. Dal canto nostro, impareremo a leggere l'informazione codificata nella radiazione emessa per comprendere appieno l'ambiente estremo da cui essa ha avuto origine.
+    
+\section{Dinamiche Solari e Meteorologia Spaziale}
+
+Queste immagini derivano dai dati raccolti dal satellite spaziale \textbf{SDO} (\textit{Solar Dynamics Observatory}). Tra i vari strumenti a bordo, vi è l'\textbf{AIA} (\textit{Atmospheric Imaging Assembly}). Questo strumento è un \textit{imager}: acquisisce immagini dell'intero disco solare (full sun) permettendo l'estrazione di dettagli ad altissima risoluzione spaziale, operando su differenti bande dell'Ultravioletto Estremo (EUV). Le bande osservate spaziano da quelle corrispondenti a plasmi relativamente "freddi" a quelle di plasmi estremamente caldi.
+
+Ad esempio, nell'immagine che vedete colorata in rosso, stiamo osservando la riga dell'\textbf{Elio II} (He II, elio singolarmente ionizzato) a $304\text{ \AA}$ (EUV).
+Questa riga è indicativa della \textbf{cromosfera} solare. Si possono notare chiaramente delle strutture "a bolla" o "granuli". Chi di voi ha nozioni di fisica stellare saprà che al di sotto della superficie solare è presente una zona convettiva (convection zone) dove il plasma caldo risale per poi sprofondare una volta raffreddato, proprio come un liquido in ebollizione. Queste bolle convettive lasciano una firma (impronta) ben visibile nella cromosfera sovrastante, ed è esattamente ciò che rivela l'AIA in questa lunghezza d'onda.
+
+L'immagine colorata in giallo, osservata in precedenza, mostra strati ancora più esterni. Il Sole, infatti, è stratificato:
+
+\begin{enumerate}
+    \item \textbf{Fotosfera}: la superficie apparente, quella visibile otticamente dalla Terra.
+    \item \textbf{Cromosfera}: lo strato immediatamente superiore.
+    \item \textbf{Regione di Transizione} (Transition Region): uno strato sottilissimo.
+    \item \textbf{Corona Solare}: l'atmosfera più esterna.
+\end{enumerate}
+
+Le dinamiche in queste regioni governano l'espulsione di materia nello spazio. Forti esplosioni magnetiche, chiamate brillamenti (flares), possono innescare fenomeni noti come \textbf{Espulsioni di Massa Coronale} (CME - \textit{Coronal Mass Ejections}). Una CME proietta enormi quantità di plasma (radiazione e particelle cariche) nello spazio interplanetario, generando lo space weather che influenza l'ambiente terrestre. Pur conoscendo bene il Sole in quanto stella a noi più prossima, restano ancora molti misteri irrisolti riguardo al suo funzionamento.
+
+    \subsection{Stratificazione Termica e Diagnostica Spettroscopica}
+    
+    Il satellite SDO orbita a circa 1 UA (Unità Astronomica) dalla Terra e fornisce un monitoraggio continuo (24 ore su 24) ad altissima cadenza (high-cadence), fondamentale per catturare la rapida evoluzione dinamica degli eventi.
+    
+    I vari filtri dell'AIA ci permettono di effettuare una scansione stratigrafica dell'atmosfera solare. Come è possibile sapere quale strato stiamo osservando?
+    Perché \textbf{ogni riga spettrale ha il suo picco di emissione a una ben specifica temperatura}. Non è possibile osservare l'emissione di un certo ione se il plasma locale non ha la temperatura necessaria a produrre e mantenere quello stato di ionizzazione.
+    
+    Analizziamo i profili termici:
+    \begin{itemize}
+        \item La fotosfera emette come un \textbf{corpo nero} (black body). La radiazione visibile continua del Sole (il tipico colore "giallo" che vediamo ad occhio nudo, sebbene il picco sia in realtà più spostato verso il verde-giallo) corrisponde a una temperatura superficiale di circa $6000\text{ K}$ (spesso citata intorno ai $5800\text{ K}$).
+        \item Le righe dell'He II a $304\text{ \AA}$ (cromosfera) raggiungono il picco attorno agli $80000\text{ K}$ (spesso arrotondati a $10^5\text{ K}$ nella regione di transizione superiore). In questi strati, l'analisi delle righe ci permette di mappare anche la densità del plasma. Salendo di quota, la temperatura aumenta mentre la densità decresce gradualmente.
+        \item La riga a $171\text{ \AA}$ è prodotta dal Ferro IX (Fe IX). Questa emissione segna il confine tra l'alta cromosfera, la regione di transizione e la bassa corona.
+    \end{itemize}
+    
+    Proprio nella \textbf{Regione di Transizione} si verifica un fenomeno che ancora oggi costituisce uno dei più grandi enigmi dell'astrofisica (il problema del riscaldamento coronale): in uno spessore atmosferico ristrettissimo, la densità del plasma crolla drasticamente (da $10^{11}$ a $10^{8}\text{ cm}^{-3}$), diventando molto tenue (thin), mentre \textbf{la temperatura s'impenna} vertiginosamente dai $6000\text{ K}$ fotosferici a oltre \textbf{un milione di gradi} ($> 10^6\text{ K}$) nella corona.
+    I fisici ritengono che l'energia necessaria a sostenere queste temperature provenga dalla dissipazione dei forti campi magnetici coronali, ma il meccanismo esatto non è ancora stato completamente ricostruito o modellizzato in ogni suo dettaglio.
+
+\section{Fusione Nucleare e Confinamento Magnetico}
+
+Spostiamoci ora dall'astrofisica all'ambiente di laboratorio.
+Il limite operativo più severo di un reattore a fusione termonucleare è la durata. Il plasma fonde ma, a causa di instabilità fluidodinamiche e termiche, le condizioni di fusione (nel passato) potevano essere mantenute solo per \textbf{microsecondi}.
+Un rilascio di potenza enorme ma durato una frazione di secondo è inutilizzabile per un impianto industriale (power plant) che necessita di produrre corrente elettrica continua. Probabilmente vi sarà capitato di leggere recenti comunicati stampa o notizie sui social che annunciavano "record di durata della fusione". Si è passati dai microsecondi ai millisecondi e, recentemente, si iniziano a raggiungere alcuni secondi di confinamento stabile. Tuttavia, per un reattore commerciale, la sfida del mantenimento del plasma resta immensa.
+
+In laboratorio abbiamo il vantaggio di poter alterare i parametri del modello per verificare direttamente le nostre teorie, cosa ovviamente impossibile quando si osserva una stella lontana, dove la diagnostica è puramente osservativa.
+
+Esistono diversi approcci alla fusione controllata.
+
+\begin{itemize}
+    \item \textbf{Confinamento Magnetico (Magnetic Confinement)}: È l'approccio adottato dal \textbf{Tokamak}. Questo dispositivo (che ha una caratteristica geometria a "ciambella" toroidale, sebbene la fisica interna sia molto complessa) utilizza giganteschi campi magnetici per "confinare" e mantenere il plasma intrappolato e staccato dalle pareti del reattore. I grandi progetti come JET e ITER usano questa architettura.
+    \item \textbf{Confinamento Inerziale (Inertial Confinement)}: Sebbene in Italia l'industria elettronucleare civile sia ferma, la ricerca scientifica è molto attiva. Ad esempio, a Catania, gruppi di ricerca afferenti a fisica nucleare (e trattati nei corsi di Istituzioni di Fisica Nucleare) operano anche in regime di confinamento inerziale (tipicamente ottenuto tramite l'implosione di capsule di combustibile indotta da laser ad altissima potenza).
+\end{itemize}
+
+I nuovi modelli di reattori (incluso ITER) incorporano un modulo vitale chiamato \textbf{Divertor} (divertore). Situato generalmente sul fondo del Tokamak, il divertore funge da "sistema di scarico". Il plasma centrale è spaventosamente caldo (nell'ordine delle decine o centinaia di milioni di gradi, persino più caldo dell'interno del Sole). Quando le particelle (o l'eccesso di elio prodotto dalla reazione) vengono deviate verso il divertore, devono essere obbligatoriamente raffreddate prima di poter essere estratte, altrimenti distruggerebbero le pareti. Questo raffreddamento (cooling) si ottiene iniettando sbuffi di gas pesanti (come elio neutro, argon, neon, etc.) che irradiano l'energia abbassando le temperature locali. La nostra spettroscopia è essenziale per monitorare l'efficienza di questo processo.
+
+\section{Fisica Atomica e Diagrammi di Ionizzazione}
+
+In tutti questi contesti, la \textbf{Fisica Atomica} è la chiave per interpretare lo spettro e dedurre le proprietà della sorgente emissiva.
+Vi mostro un grafico che ha una notevole importanza storica per me e per il mio dipartimento nel Regno Unito. Il ricercatore che occupò il mio ufficio prima di me era \textbf{Jim Lang}, un pioniere assoluto nello sviluppo della fisica atomica per la diagnostica plasmatica. Lang lavorò per anni al satellite \textbf{SOHO} (\textit{Solar and Heliospheric Observatory}), lanciato nel 1995 e ancora parzialmente in operazione, il quale fu la prima vera missione spaziale a fare uso intensivo di questa specifica tipologia di modelli atomici applicati all'astrofisica.
+Lang si chiese: "\textit{Come possiamo correlare l'emissione radiativa di differenti stati ionici sia agli eventi solari sia alle macchine di laboratorio?}"
+
+Da questi studi nasce il grafico qui riprodotto (diagramma della lunghezza d'onda contro la temperatura di formazione).
+
+    \subsection{Analisi del Diagramma Termico-Spettrale}
+    
+    Nel grafico, l'asse delle ascisse rappresenta la lunghezza d'onda ($\lambda$), spaziando nell'EUV (da $200\text{ \AA}$ a $1600\text{ \AA}$), mentre l'asse delle ordinate indica la \textbf{temperatura di formazione (Formation Temperature)} degli ioni.
+    Ogni singolo "punto" visibile sul grafico corrisponde a uno \textbf{specifico stato di ionizzazione} di un elemento chimico (es. ferro, silicio, ossigeno).
+    
+    L'utilità di questo plot è immediata: traccia la stratificazione termica del plasma basata sulla radiazione emessa.
+    \begin{itemize}
+        \item \textbf{Plasmi Freddi (Cold Plasmas)}: Nella parte inferiore del grafico (basse temperature, corrispondenti alla bassa atmosfera solare) troviamo specie neutre o a basso grado di ionizzazione: atomi neutri (idrogeno, elio), ioni monovalenti e, come già accennato, finanche tracce molecolari nei regimi più freddi. Se il vostro spettro presenta solo queste righe (o se la riga del Silicio III, Si III, per citarne una, domina), significa che state osservando un ambiente relativamente freddo.
+        \item \textbf{Plasmi Caldi (Hot Plasmas)}: Salendo lungo l'asse delle temperature (superando la cromosfera e arrivando in corona), le particelle perdono sempre più elettroni per collisioni termiche. Iniziamo quindi a rilevare stati di ionizzazione estremamente elevati: il ferro, ad esempio, presenterà righe corrispondenti a Fe XIII, Fe XIV o persino Fe XX e superiori.
+    \end{itemize}
+    
+    Pertanto, la semplice presenza o assenza di specifiche linee spettrali nel range UV fornisce in prima approssimazione il primo parametro diagnostico fondamentale: definisce, a colpo d'occhio, l'ordine di grandezza termico della regione plasmatica sotto osservazione.
+    
+\section{L'Intersezione tra Modello Teorico e Osservazione}
+
+Tutto ciò che abbiamo illustrato finora costituisce la vera connessione tra teoria ed esperimento, ed è l'obiettivo che desideriamo raggiungere nella prima parte di questo corso. La finalità del nostro modello (la "teoria") è quella di descrivere l'ambiente fisico per poter interpretare le "osservazioni" (le misure).
+Per voi fisici, il campo di applicazione più affascinante è verosimilmente lo spazio profondo, ma i medesimi concetti si applicano alla diagnostica di laboratorio.
+
+Questi modelli devono essere costantemente aggiornati, poiché vengono varati nuovi veicoli spaziali (new spacecrafts) e nuovi strumenti sempre più potenti. Avrete certamente seguito i progressi del telescopio spaziale \textbf{James Webb} (JWST). Quando sono state pubblicate le prime immagini (alle quali lavorava anche un mio collega), l'entusiasmo della comunità scientifica è stato enorme. Ma l'aumento delle performance strumentali comporta una necessità critica: se disponiamo di un'ottima strumentazione, dobbiamo disporre di una \textbf{modellistica teorica di altissima qualità}. Altrimenti, osserveremo nuovi fenomeni nei dati, ma non saremo in grado di comprenderne la natura fisica.
+
+    \subsection{L'Esempio della Risoluzione Spaziale: Solar Orbiter}
+    
+    Vi riporto l'esempio di Solar Orbiter. Nelle primissime immagini acquisite, abbiamo notato dei piccolissimi \textit{brightenings} (brillamenti su microscala), mai visti prima. Questo è stato possibile perché Solar Orbiter raggiungeva una risoluzione spaziale straordinaria: circa $200\text{ km}$ sul Sole.
+    In passato, gli strumenti potevano risolvere dettagli dell'ordine dei $1700\text{ km}$ per singolo pixel (o punto immagine).
+    
+    Per comprendere l'entità di questo salto tecnologico, immaginate la geografia terrestre: la distanza tra Milano e Catania è di circa $1500\text{ km}$. La distanza tra Messina e Catania è di circa $100\text{ km}$.
+    Con la vecchia risoluzione (un pixel = $1700\text{ km}$), tutta l'Italia da Milano a Catania collassava in un unico punto; non potevate distinguere nulla al suo interno. Con la nuova risoluzione (un pixel = $200\text{ km}$), potete improvvisamente distinguere le singole città lungo il percorso.
+    Dal punto di vista dell'osservazione solare, questo balzo risolutivo fa emergere strutture e dinamiche inedite (es. i micro-brillamenti) che i vecchi modelli non erano strutturati per spiegare. Emerge quindi la necessità di aggiornare l'apparato teorico.
+
+\section{Limiti dei Modelli a Bassa Densità}
+
+Il primissimo modello con cui avremo a che fare è il \textbf{Modello Coronale (Coronal Model)}. Si tratta di un modello sviluppato per plasmi a densità prossima allo zero (zero density model) ed è ampiamente utilizzato in astrofisica per lo spazio profondo. Il suo vantaggio risiede nell'estrema semplicità: includendo soltanto pochissimi processi atomici, funziona egregiamente per plasmi molto tenui.
+
+Tuttavia, non appena rivolgiamo i nuovi strumenti ad alta risoluzione verso regioni solari più dense (o se applichiamo il modello a un reattore a fusione), il Modello Coronale fallisce miseramente. È imperativo sviluppare nuovi modelli che rispondano alla domanda: \textit{"Cosa succede quando la densità aumenta?"}
+Studiare l'aumento di densità è vitale non solo per la fusione, ma anche per comprendere i \textbf{solar flares}. Durante un flare solare, la densità locale aumenta. Noi vogliamo capire l'evoluzione del flare per modellarlo e predirne gli effetti; allo stesso modo, vogliamo comprendere gli strati più interni e densi dell'atmosfera solare.
+
+\section{Approccio Moderno: Il Modello a Livelli (Bundle Model)}
+
+I progressi fondamentali in quest'area risalgono a una pubblicazione del 2006, un metodo su cui ho poi basato il mio stesso dottorato.
+Il problema centrale è questo: in Struttura della Materia avete studiato il modello per un singolo atomo isolato. Ma in un plasma reale noi non abbiamo un singolo atomo: abbiamo un numero di Avogadro di atomi, costituiti da moltissimi elettroni, che collidono e transitano tra innumerevoli livelli energetici.
+
+Quanti livelli energetici possiede un atomo?
+La risposta teorica è \textbf{infiniti}.
+Un modello computazionale rigoroso dovrebbe teoricamente tenere conto di infiniti livelli e delle transizioni tra di essi. Computazionalmente, questo è intrattabile.
+
+La soluzione proposta in quella pubblicazione del 2006 (che segna un cambio di paradigma) fu quella di suddividere i livelli dell'atomo. Si mantengono esatti e discretizzati i livelli inferiori (quelli da cui tipicamente ha origine l'emissione radiativa osservata) e si raggruppano (bundle) tutti gli infiniti livelli superiori, fino al limite di ionizzazione, all'interno di una singola matrice matematica che ne condensa le proprietà.
+Gli effetti di questi livelli superiori "raggruppati" vengono poi proiettati algebricamente sui livelli inferiori in quello che viene chiamato \textbf{Bundle Model} (modello a raggruppamento). Questa tecnica fornisce una descrizione dell'atomo estremamente robusta, capace di funzionare in regimi di alta e bassa densità, alta e bassa temperatura, e includendo tutti i processi collisionali in modo computazionalmente sostenibile.
+
+    \subsection{L'Equazione della Funzione di Contribuzione}
+    
+    Senza addentrarci prematuramente nella derivazione formale, vi presento l'equazione cardine che unisce la teoria alle osservazioni spettroscopiche. Questa equazione descrive l'intensità della radiazione osservata:
+    \begin{equation}
+    I = \frac{1}{4\pi} \int G(T, N_e) \cdot \text{DEM}(T) , dT
+    \end{equation}
+    Dove:
+    \begin{itemize}
+        \item $I$ rappresenta l'\textbf{Intensità} (l'osservabile misurata dal satellite).
+        \item Il termine $\frac{1}{4\pi}$ deriva dall'angolo solido (solid angle) per un'emissione isotropa.
+        \item $G(T, N_e)$ è la \textbf{Funzione di Contribuzione (Contribution Function)}. Questo è il cuore teorico del sistema: racchiude tutta la modellistica atomica, i tassi di eccitazione/de-eccitazione, le probabilità di transizione e le funzioni di ionizzazione. Dipende strettamente dalla temperatura ($T$) e dalla densità elettronica ($N_e$).
+        \item $\text{DEM}(T)$ è il termine incognito dell'integrale, ed è ciò che si desidera ricavare.
+    \end{itemize}
+    
+    \subsection{La Differential Emission Measure (DEM)}
+    
+    La funzione \textbf{DEM (Differential Emission Measure)} è l'obiettivo ultimo della nostra modellizzazione macroscopica. Il nome stesso ne indica la natura: è una misura dell'emissione differenziale. Fisicamente, essa rappresenta la distribuzione spaziale del plasma in funzione della sua temperatura (e della densità). Invertendo l'equazione integrale mostrata poc'anzi (notando l'intensità osservata $I$ e calcolando la funzione di contribuzione $G$), si ottiene la DEM. Conoscere la DEM significa avere una mappatura completa della struttura termica del plasma lungo la linea di vista.
+    
+\section{Le Conseguenze di un Modello Errato: Il Caso dell'Ossigeno IV}
+
+Voglio raccontarvi un aneddoto del mio periodo di dottorato che illustra perché un modello rigoroso (come il Bundle Model) sia fondamentale.
+
+Stavo calcolando i profili termici utilizzando i dati dei satelliti SOHO (strumenti SUMER e CDS). SOHO si trova nel \textbf{Punto di Lagrange L1} (un punto di equilibrio gravitazionale instabile tra Terra e Sole, situato a circa $1.5 \times 10^6\text{ km}$ dalla Terra. Un satellite in L1 orbita attorno al Sole mantenendosi sempre allineato con la Terra, muovendosi in un piano perpendicolare all'asse Terra-Sole, permettendo un'osservazione solare ininterrotta). Per inciso, i dati furono incrociati con quelli del satellite giapponese \textit{Hinode}, inserito in orbita polare terrestre (polar orbit).
+
+L'oggetto del mio studio erano le righe dell'\textbf{Ossigeno IV (O IV)}, utilizzate specificamente come termometri plasmatici. Calcolando il rapporto tra queste righe usando il modello completo (il modello di Summers), ottenevo temperature coerenti.
+Contemporaneamente, un altro gruppo di ricerca pubblicò un articolo in cui riportava temperature per la stessa regione solare incredibilmente elevate e fisicamente inconsistenti. Avendo io ottenuto risultati corretti, indagammo sull'origine del loro errore.
+
+Il problema risiedeva proprio nel modello atomico da loro adottato. Essi avevano calcolato i rapporti tra due righe originate dallo stesso livello energetico superiore verso due livelli inferiori differenti (oppure originanti da due livelli superiori differenti che decadevano su un livello comune). Tuttavia, avevano utilizzato il \textbf{Modello Coronale di base}. Questo modello ignorava la redistribuzione della popolazione dei livelli indotta dalla densità e trascurava i contributi dei livelli energetici superiori non raggruppati. Di conseguenza, il loro modello prevedeva un andamento puramente \textbf{lineare} per i ratei di decadimento, sovrastimando pesantemente le intensità teoriche e, per riflesso, calcolando temperature spaventosamente errate (es. $10^6\text{ K}$ invece di $10^5\text{ K}$).
+
+Questo esempio chiarisce il rischio critico: l'impiego di una fisica atomica imprecisa vi porterà a "scoprire" fenomeni inesistenti (falsi positivi) e a trarre conclusioni astrofisiche completamente sbagliate.
+
+\section{Dinamiche Temporali: I Flare Solari}
+
+Come ultimissimo punto, la spettroscopia non produce solo immagini statiche, ma ci permette di seguire l'evoluzione \textbf{temporale} degli eventi spaziali.
+
+Invece di acquisire immagini globali, uno strumento può acquisire uno spettro in un singolo punto con un'altissima cadenza temporale. Analizzando l'andamento della \textbf{densità in funzione del tempo} durante un \textbf{solar flare}, si nota un comportamento peculiare.
+La densità non aumenta linearmente per poi decrescere; il grafico dell'intensità (e quindi della densità) in funzione del tempo mostra una serie di \textbf{picchi successivi e sovrapposti}. La curva sale "a gradini" (up and up and up) per poi scendere gradualmente (down, down, down).
+L'interpretazione fisica di questa firma spettroscopica è che un brillamento non sia una singola, semplice esplosione isolata. Al contrario, l'evento è causato da un'attivazione progressiva ("a catena") di anelli magnetici (magnetic loops) interconnessi, che esplodono in rapida sequenza l'uno dopo l'altro.
+Questo livello di comprensione dinamica è raggiungibile esclusivamente attraverso l'analisi spettroscopica ad alta risoluzione.
+
+\section{Modellistica Avanzata e Codici di Simulazione}
+
+Questo è lo strumento diagnostico fondamentale a nostra disposizione: la spettroscopia ci permette di decifrare fenomeni altrimenti inaccessibili. Dal punto di vista operativo, estraiamo lo spettro, eseguiamo le nostre \textit{routine} di calcolo, otteniamo il rapporto tra le intensità delle righe e, a partire da questi dati, possiamo applicare differenti tipologie di modellizzazione.
+
+Tra i modelli più complessi vi sono i codici di \textbf{Magnetoidrodinamica (MHD)}. Si tratta di software avanzati che risolvono le equazioni della fluidodinamica accoppiate a quelle del campo elettromagnetico. Il nostro compito è inserire in questi codici MHD i modelli corretti, derivati dalla fisica atomica e dalla spettroscopia dei plasmi, affinché le simulazioni producano risultati fisicamente validi.
+
+Sono certo che alcuni di voi utilizzeranno questi strumenti in futuro, specialmente chi deciderà di specializzarsi in fisica solare, dove l'uso di tali codici è estremamente diffuso. Tuttavia, in astrofisica in generale, l'utilizzo di queste simulazioni è un passaggio obbligato.
+A differenza della teoria di base, in astrofisica non abbiamo quasi mai il lusso di osservare una singola reazione isolata proveniente da un punto preciso nello spazio; dobbiamo quindi affidarci a una modellizzazione ibrida. In scenari specifici, ci troviamo ad analizzare un \textbf{plasma fuori equilibrio (non-equilibrium plasma)}. Per descriverlo correttamente, è stato necessario accoppiare due approcci:
+
+\begin{itemize}
+    \item Un modello dipendente dalla densità, dal punto di vista della fisica atomica.
+    \item Un modello fluidodinamico, per descrivere l'evoluzione cinematica e dinamica del sistema.
+\end{itemize}
+
+\section{Universalità dei Modelli: Dalla Fusione Nucleare all'Astrofisica}
+
+Esattamente lo stesso impianto modellistico è applicato nel campo della fusione termonucleare controllata. Riferendoci a quanto mostrato in precedenza sul reattore Tokamak, possiamo analizzare la regione del \textbf{divertore} (divertor). La regione inferiore del divertore è relativamente più fredda e presenta proprietà termodinamiche simili a quelle dell'atmosfera solare.
+
+In questo contesto, abbiamo campionato i valori di densità ($N_e$) e temperatura ($T$) per ogni singolo punto spaziale, calcolando l'emissione locale e simulando la propagazione della radiazione nel caso di un plasma all'equilibrio.
+L'aspetto cruciale è il seguente: una volta sviluppato un modello fisico solido e robusto, questo diviene universale. Lo stesso apparato può essere applicato a innumerevoli ambienti e discipline:
+
+\begin{itemize}
+    \item Cosmologia.
+    \item Formazione stellare (star formation).
+    \item Fisica solare.
+    \item Mezzo interstellare (interstellar medium).
+    \item Plasmi indotti da laser ad alta potenza.
+    \item Fusione termonucleare controllata.
+\end{itemize}
+
+    \subsection{Il Problema dell'Integrazione sulla Linea di Vista (Line of Sight)}
+    
+    Un'altra sfida peculiare dell'astrofisica riguarda la sovrapposizione dell'emissione. Nello spazio, la radiazione reale che catturiamo non proviene da uno strato bidimensionale, ma può essere originata da porzioni di plasma con densità e temperature variabili lungo tutto il cammino ottico.
+    
+    Durante la modellizzazione, è necessario sommare tutti i contributi emissivi lungo la \textbf{linea di vista (line of sight)} per calcolare quale sarà la radiazione finale risultante. In astrofisica non vediamo mai il singolo punto sorgente, ma percepiamo esclusivamente l'emissione integrata. Un eccellente esercizio diagnostico consiste proprio nel processo inverso: "districare" (disentangle) questa informazione per risalire alle proprietà locali del plasma.
+    
+    A dimostrazione di questa versatilità, nel mio lavoro di ricerca ho confrontato l'applicazione del medesimo modello su due scenari radicalmente diversi: i brillamenti solari (solar flares) e i plasmi confinati all'interno del Tokamak, ottenendo in entrambi i casi risultati eccellenti.
+    
+    \subsection{L'Obiettivo Formativo: Sviluppo delle Competenze (Skills)}
+    
+    Il messaggio fondamentale che vorrei trasmettervi oggi è che conoscere i principi fisici teorici non è sufficiente; bisogna saper tradurre concretamente tali principi nello sviluppo del modello. Costruire fisicamente il modello è un compito arduo.
+    La competenza tecnica (skill) principale che acquisirete sarà comprendere intimamente la modellistica: come strutturarla e come tradurla in codice. Una volta padroneggiato questo strumento, sarete in grado di indagare cosa accade nel Sole, nell'Universo o in qualsiasi altro ambiente plasmatico.
+
+\section{Logistica del Corso, Strumenti e Materiale Didattico}
+
+Concludiamo con alcune note logistiche per le prossime lezioni.
+
+    \subsection{Metodo di Insegnamento per le Prossime Lezioni}
+    Nel prossimo modulo affronteremo le equazioni di bilancio delle popolazioni e le equazioni del trasporto radiativo. A causa dell'elevata densità di formule matematiche e passaggi analitici, l'uso esclusivo di slide risulterebbe inefficace. Pertanto, mi avvarrò di un tablet per scrivere e sviluppare le derivazioni passo dopo passo in tempo reale.
+    Condividerò con voi questo blocco appunti digitale (ad esempio tramite OneNote) in modo che possiate avere traccia di tutto ciò che scriviamo. Se riuscirò a completare la stesura dei miei appunti manoscritti dell'anno scorso, vi fornirò anche quelli al termine del corso.
+    
+    \subsection{Testi di Riferimento (Textbooks)}
+    
+    Per quanto riguarda i libri di testo:
+    \begin{itemize}
+        \item I testi di riferimento sono elencati nel programma ufficiale (Syllabus).
+        \item Provvederò a collegare esplicitamente i vari libri (o specifici capitoli) alle relative sezioni del programma, così saprete esattamente dove studiare ogni argomento.
+        \item Vi suggerisco vivamente di consultare i testi. Non è necessario acquistarli tutti; potete recarvi in biblioteca e fotocopiare o consultare le sezioni di interesse. Sebbene vi fornirò spiegazioni esaustive, il supporto di un testo accademico è essenziale per un apprendimento profondo.
+    \end{itemize}
+    
+    Infine, un invito alla collaborazione costruttiva: sono umano e posso commettere errori di calcolo o distrazioni durante le dimostrazioni matematiche. Vi prego di intervenire apertamente e di correggermi senza esitazione qualora notaste delle inesattezze.
+    
+    Per oggi ci fermiamo qui, questa è la conclusione della prima lezione. Ci vediamo al prossimo incontro.
